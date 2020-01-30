@@ -47,3 +47,12 @@ document.addEventListener("wheel", function (e) {
     }
     
 });
+
+
+
+
+$(".littleCircle").hover(function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  })
