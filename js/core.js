@@ -22,7 +22,7 @@ document.addEventListener("wheel", function (e) {
     console.log(closedItem)
     if(!closedItem) {
         if (e.deltaY < 0) {
-            x -= 1;
+            x -= 2;
             if(Math.ceil(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
                 console.log((Math.round(x / spinWhenDegree) * spinWhenDegree));
                 console.log(x);
@@ -32,7 +32,7 @@ document.addEventListener("wheel", function (e) {
                 setTimeout(function(){closedItem = false;$(".circle").css({"-webkit-transition": "100ms linear"});}, 800);
             }
         } else {
-            x += 1;
+            x += 2;
             if(Math.floor(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
                 x = Math.round(x / spinWhenDegree) * spinWhenDegree;
                 $(".circle").css({"-webkit-transition": "800ms linear", "transform": "rotate(" + x + "deg)"});
