@@ -10,32 +10,34 @@ $(".circle").css({
     "margin-left": -leftValue + "px",
     "height": things + "px"
 });
-$(".firstSection").css({
+$(".section").css({
     "width": allWidth + "px",
     "left": leftValue + "px"
 })
 
+
+let spinWhenDegree = 45;
 closedItem = false;
 document.addEventListener("wheel", function (e) {
     console.log(closedItem)
     if(!closedItem) {
         if (e.deltaY < 0) {
             x -= 1;
-            if(Math.ceil(x / 180) != Math.round(x / 180)) {
-                console.log((Math.round(x / 180) * 180));
+            if(Math.ceil(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
+                console.log((Math.round(x / spinWhenDegree) * spinWhenDegree));
                 console.log(x);
-                x = Math.round(x / 180) * 180;
-                $(".circle").css("transform", "rotate(" + x + "deg)");
+                x = Math.round(x / spinWhenDegree) * spinWhenDegree;
+                $(".circle").css({"-webkit-transition": "800ms linear", "transform": "rotate(" + x + "deg)"});
                 closedItem = true;
-                setTimeout(function(){closedItem = false}, 800);
+                setTimeout(function(){closedItem = false;$(".circle").css({"-webkit-transition": "100ms linear"});}, 800);
             }
         } else {
             x += 1;
-            if(Math.floor(x / 180) != Math.round(x / 180)) {
-                x = Math.round(x / 180) * 180;
-                $(".circle").css("transform", "rotate(" + x + "deg)");
+            if(Math.floor(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
+                x = Math.round(x / spinWhenDegree) * spinWhenDegree;
+                $(".circle").css({"-webkit-transition": "800ms linear", "transform": "rotate(" + x + "deg)"});
                 closedItem = true;
-                setTimeout(function(){closedItem = false}, 800);
+                setTimeout(function(){closedItem = false;$(".circle").css({"-webkit-transition": "100ms linear"});}, 800);
             }
         }
         if(!closedItem) {

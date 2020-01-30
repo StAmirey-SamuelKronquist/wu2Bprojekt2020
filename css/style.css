@@ -1,11 +1,11 @@
 html {
-    
+    overflow: hidden;
     color: white;
     background: black;
 }
 
 #container {
-    overflow: hidden;
+    
     position: absolute;
     left: 0;
     top: 50%;
@@ -21,7 +21,7 @@ html {
     background: black;
     border-radius: 50%;
     transform: rotate(0deg);
-    -webkit-transition: 800ms linear;
+    -webkit-transition: 100ms linear;
 }
 
 .box {
@@ -30,15 +30,24 @@ html {
     height: 100vh;
 }
 
-.firstSection {
+.section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: blue;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.secondSec {
+    transform: translateY(-50%) rotate(45deg);
+}
+.thirdSec {
+    transform: translateY(-50%) rotate(90deg);
+}
+.fourthSec {
+    transform: translateY(-50%) rotate(135deg);
 }
 
 .two {
