@@ -14,6 +14,11 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+
+button {
+    border:none;
+}
+
 #container {
     position: absolute;
     left: 0;
@@ -27,7 +32,7 @@ html {
 .circle {
     width: 500px;
     height: 500px;
-    background: #070818;
+    background: #18232b;
     border-radius: 50%;
     transform: rotate(225deg);
     -webkit-transition: 100ms linear;
@@ -103,7 +108,7 @@ html {
     grid-template-areas: 
      'hd6 mn6'
      'se6 mn6';
-     grid-template-rows: 200px 1fr;
+     grid-template-rows: 150px 1fr;
      grid-template-columns: 1fr 1fr;  
 }
 
@@ -111,12 +116,15 @@ html {
     grid-area: hd6;
     font-size: 2vw;
 }
+#six header h1 {
+    margin-bottom:0px;
+}
 #six main {
     grid-area: mn6;
 }
 #six main article {
-    width: 80%;
-    height:80%;
+    width: 90%;
+    height:90%;
     background: #1f2b33;
     border-radius:16px;
 }
@@ -130,10 +138,17 @@ html {
     width: 80%;
     height:80%;
     background: #1f2b33;
+    box-shadow: inset 0px 0px 10px 0px black;
     border-radius:16px;
     padding-left:20px;
     padding-right:40px;
 }
+
+#six section article div {
+    padding:10%;
+}
+
+
 
 #six section article h2 {
     color:#f76c82;
@@ -145,6 +160,20 @@ html {
     font-size:3vw;
     margin-top:0vw;
     margin-bottom:2vw;
+}
+#six section article button {
+    width:200px;
+    height:50px;
+    border-radius: 8px;
+    background: #f76c82;
+    margin-top:20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#six section article button:hover {
+    cursor: pointer;
+    transform: translateX(-50%) scale(0.95);
 }
 
 #six header, #six main, #six section {
