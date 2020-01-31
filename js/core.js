@@ -51,8 +51,9 @@ document.addEventListener("wheel", function (e) {
 
 
 
-$(".littleCircle").hover(function() {
-    $( this ).addClass( "hover" );
-  }, function() {
-    $( this ).removeClass( "hover" );
-  })
+$(".littleCircle").hover(
+        function() {
+            $( this ).find( "h1" ).show();
+      }, function() {
+        $( this ).find( "h1" ).hide();
+      })

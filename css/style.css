@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rubik:400');
 @import url('https://fonts.googleapis.com/css?family=Rubik:900');
+:root {
+    --unit1: 1vw;
+    --unit2: 1vh;
+}
 
 html {
     overflow: hidden;
@@ -11,7 +15,6 @@ html {
 }
 
 #container {
-    
     position: absolute;
     left: 0;
     top: 50%;
@@ -26,7 +29,7 @@ html {
     height: 500px;
     background: #070818;
     border-radius: 50%;
-    transform: rotate(0deg);
+    transform: rotate(225deg);
     -webkit-transition: 100ms linear;
 }
 
@@ -34,9 +37,7 @@ html {
     border: 2px solid white;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 .two {
     transform: rotate(180deg)
@@ -44,10 +45,15 @@ html {
 .middle {
     flex: 1;
 }
+#one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #one .logo {
-    height: 80vh;
-    width: 80vh;
+    height: calc(80 * var(--unit1));
+    width: calc(80 * var(--unit1));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,14 +64,14 @@ html {
 }
 
 #one .logo h1 {
-    font-size:10vw;
+    font-size:calc(10 * var(--unit2));
     animation-name: normalFadeIn;
     animation-duration: 4s;
 }
 
 #one .logo h2 {
     font-weight: 400;
-    font-size:4vw;
+    font-size:calc(4 * var(--unit2));
 }
 
 
@@ -79,16 +85,72 @@ html {
 }
 
 .logo .the {
-    margin-top:-4vw;
-    margin-right:-4vw;
+    margin-top:calc(-4 * var(--unit2));
+    margin-right:calc(-4 * var(--unit2));
     animation-name: leftFadeIn;
     animation-duration: 3s;
 }
 .logo .project {
-    margin-top:14vw;
-    margin-left:-10vw;
+    margin-top:calc(14 * var(--unit2));
+    margin-left:calc(-10 * var(--unit2));
     animation-name: rightFadeIn;
     animation-duration: 3s;
+}
+
+
+#six {
+    display: grid;
+    grid-template-areas: 
+     'hd6 mn6'
+     'se6 mn6';
+     grid-template-rows: 200px 1fr;
+     grid-template-columns: 1fr 1fr;  
+}
+
+#six header {
+    grid-area: hd6;
+    font-size: 2vw;
+}
+#six main {
+    grid-area: mn6;
+}
+#six main article {
+    width: 80%;
+    height:80%;
+    background: #1f2b33;
+    border-radius:16px;
+}
+
+
+#six section {
+    grid-area: se6;
+}
+
+#six section article {
+    width: 80%;
+    height:80%;
+    background: #1f2b33;
+    border-radius:16px;
+    padding-left:20px;
+    padding-right:40px;
+}
+
+#six section article h2 {
+    color:#f76c82;
+    font-size:15pt;
+    font-weight: normal;
+}
+#six section article h1 {
+    font-weight: normal;
+    font-size:3vw;
+    margin-top:0vw;
+    margin-bottom:2vw;
+}
+
+#six header, #six main, #six section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -103,9 +165,9 @@ html {
 }
 
 .littleCircle {
-    width: 5vw;
-    height:5vw;
-    box-shadow: inset 0px 0px 1vw 0px #121452;
+    width: calc(5 * var(--unit2));
+    height:calc(5 * var(--unit2));
+    box-shadow: inset 0px 0px 1vh 0px #121452;
     background: red;
     border-radius: 50%;
     display: flex;
@@ -116,22 +178,27 @@ html {
 }
 
 .littleCircle:hover {
-    width:10vw;
-    height:10vw;
+    width:calc(10 * var(--unit2));;
+    cursor: pointer;
     border-radius: 5px;
 }
 
+.littleCircle h1 {
+    display: none;
+    white-space: nowrap;
+}
+
 .c1 {
-    margin-left:40vh;
+    margin-left:calc(40 * var(--unit1));
 }
 .c2 {
-    margin-left:-40vh;
+    margin-left:calc(-40 * var(--unit1));
 }
 .c3 {
-    margin-top:-40vh;
+    margin-top:calc(-40 * var(--unit1));
 }
 .c4 {
-    margin-top:40vh;
+    margin-top:calc(40 * var(--unit1));
 }
 
 .secondSec {
@@ -152,10 +219,18 @@ html {
     100% {opacity: 1;}
 }
 @keyframes leftFadeIn {
-    0% {opacity: 0; margin-right:-8vw;}
-    100% {opacity: 1; margin-right:-4vw;}
+    0% {opacity: 0; margin-right:calc(-8 * var(--unit2))}
+    100% {opacity: 1; margin-right:calc(-4 * var(--unit2));}
 }
 @keyframes rightFadeIn {
-    0% {opacity: 0; margin-left:-14vw;}
-    100% {opacity: 1; margin-left:-10vw;}
+    0% {opacity: 0; margin-left:calc(-14 * var(--unit2));}
+    100% {opacity: 1; margin-left:calc(-10 * var(--unit2));}
+}
+
+
+@media screen and (min-width: 700px) {
+    :root {
+        --unit1: 1vh;
+        --unit2: 1vw;
+    }
 }
