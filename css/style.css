@@ -123,9 +123,10 @@ button {
     grid-area: mn6;
 }
 #six main article {
-    width: 90%;
-    height:90%;
-    background: #1f2b33;
+    width: 45vw;
+    height: 45vw;
+    background-image: url(/img/screen.svg);
+    background-size: 100% 100%;
     border-radius:16px;
 }
 
