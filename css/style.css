@@ -114,7 +114,7 @@ button {
 
 #six header {
     grid-area: hd6;
-    font-size: 2vw;
+    font-size: 2.5vw;
 }
 #six header h1 {
     margin-bottom:0px;
@@ -124,11 +124,90 @@ button {
 }
 #six main article {
     width: 45vw;
-    height: 45vw;
+    height: 37vw;
     background-image: url(/img/screen.svg);
     background-size: 100% 100%;
-    border-radius:16px;
 }
+.screen {
+    width: 100%;
+    height: 73%;
+    margin-top:2px;
+    box-shadow: inset 0px 0px 0px 0.3vw black;
+    background: #05080a;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.screen h1 {
+    font-size: 3.5vw;
+    font-weight: 900;
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 0px;
+}
+
+.screen h2 {
+    font-weight: 400;
+    font-size: 1.25vw;
+    margin-top:0px;
+}
+.button {
+    width:15%;
+    height:10%;
+    display: flex;
+    border: 2px solid #b4df80;
+    background-color: #1f2b33;
+    opacity: 0.8;
+    border-radius: 8px;
+}
+
+.button h2 {
+    font-size:1vw;
+    margin:auto;
+}
+
+
+.movingCircle {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 2px #bbcddf;
+    width: 20vw;
+    height:20vw;
+    opacity: 0.5;
+}
+
+#movingCircle1 {
+    animation: rotate 15s alternate infinite;
+}
+#movingCircle2 {
+    animation: rotate_alt alternate 15s infinite;
+}
+
+
+@media screen and (max-width: 700px) {
+    #six {
+        grid-template-areas: 
+        'hd6'
+        'mn6'
+        'se6';
+        grid-template-rows: 150px 1fr 1fr;
+        grid-template-columns: 1fr;  
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {transform: perspective(100em) rotateX(-45deg) rotateY(-45deg)}
+    to {transform: perspective(100em) rotateX(315deg) rotateY(315deg) scale(1.5)}
+  }
+  @-webkit-keyframes rotate_alt {
+    from {transform: perspective(100em) rotateX(-45deg) rotateY(45deg)}
+    to {transform: perspective(100em) rotateX(315deg) rotateY(-315deg) scale(1.5)}
+  }
+
+
 
 
 #six section {
