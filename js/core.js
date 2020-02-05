@@ -52,8 +52,23 @@ document.addEventListener("wheel", function (e) {
 
 
 $(".littleCircle").hover(
-        function() {
-            $( this ).find( "h1" ).show();
-      }, function() {
-        $( this ).find( "h1" ).hide();
-      })
+function() {
+    $( this ).find( "h1" ).show();
+}, function() {
+$( this ).find( "h1" ).hide();
+})
+
+
+$(".MRlogout").click(function() {
+    $(".MRmenu").hide();
+    $(".MRindex").css("display", "flex");
+})
+
+$(".MRindex .button").click(function() {
+    $(".MRindex").hide();
+    $(".MRmenu").css("display", "block");
+})
+
+$(".mrContainer button").click(function() {
+    location.replace("https://matteraknaren.com/")
+})

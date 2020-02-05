@@ -4,6 +4,7 @@
 :root {
     --unit1: 1vw;
     --unit2: 1vh;
+    --multiplier: 2;
 }
 
 html {
@@ -104,6 +105,7 @@ button {
 
 
 #six {
+    overflow-y: scroll; 
     display: grid;
     grid-template-areas: 
      'hd6 mn6'
@@ -114,7 +116,7 @@ button {
 
 #six header {
     grid-area: hd6;
-    font-size: 2.5vw;
+    font-size: calc(2.5vw * var(--multiplier));
 }
 #six header h1 {
     margin-bottom:0px;
@@ -123,8 +125,8 @@ button {
     grid-area: mn6;
 }
 #six main article {
-    width: 45vw;
-    height: 37vw;
+    width: calc(45vw * var(--multiplier));
+    height: calc(37vw * var(--multiplier));
     background-image: url(/img/screen.svg);
     background-size: 100% 100%;
 }
@@ -140,9 +142,181 @@ button {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    user-select: none;
 }
+
+
+
+#six .MRindex {
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#six .MRmenu {
+    width: 98%;
+    height: 250%;
+    position: relative;
+    overflow-y: scroll;
+    display: none;
+}
+
+#six .MRmenu div {
+    display: grid;
+    margin:auto;
+    width:90%;
+    height:100%;
+    grid-template-areas: 
+    'MRhd MRhd MRhd MRhd'
+    'MRplay MRplay MRplay MRlogout'
+    'MRplay MRplay MRplay MRyellow'
+    'MRmyacount MRmyacount MRmyacount MRmyacount'
+    'MRshop MRlabs MRlabs MRlabs'
+    'MRstatistics MRstatistics MRstatistics MRstatistics'
+    'MRteacher MRteacher MRparrent MRparrent'
+    'MRft MRft MRft MRft';
+    grid-template-columns: 4fr 1.5fr 1.5fr 4fr;
+    grid-template-rows: 5% 15% 40% 40% 40% 25% 25% 15%;
+    grid-gap: calc(0.3vw * var(--multiplier));
+}
+
+.MRmenu::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(71, 71, 71);
+    padding:2px;
+    border-radius: 5px;
+} 
+.MRmenu::-webkit-scrollbar-thumb {
+    background-color: #a1a1a1;
+    border-radius: 5px;
+}
+
+
+#six .MRmenu section, #six .MRmenu footer { 
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#six .MRmenu section:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+    -webkit-transition: 100ms;
+}
+
+#six .MRmenu .MRyellow:hover {
+    transform: scale(1);
+    cursor: auto;
+}
+
+#six .MRmenu section h1 {
+    font-size:calc(2.75vw * var(--multiplier));
+    text-transform: uppercase;
+    margin:0;
+}
+#six .MRmenu section h2 {
+    font-size:calc(1.5vw * var(--multiplier));
+    font-weight: 700;
+    text-transform: uppercase;
+    margin:0;
+}
+#six .MRmenu section p {
+    font-size:calc(1vw * var(--multiplier));
+    margin:0;
+}
+
+
+
+#six .MRmenu footer {
+    height: 100%;
+    width: 100%;
+}
+
+#six .MRmenu footer h3 {
+    color:#859eb7;
+    font-size: calc(1vw * var(--multiplier));
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
+#six .MRmenu header {
+    grid-area: MRhd;
+}
+
+#six .MRmenu footer {
+    grid-area: MRft;
+}
+#six .MRmenu .MRplay {
+    grid-area: MRplay;
+    background-color: #73b0f4;
+    box-shadow: inset 0px -5px 0px #4a88da;
+}
+
+#six .MRmenu .MRlogout {
+    grid-area: MRlogout;
+    background-color: #b4df80;
+    box-shadow: inset 0px -5px 0px #97ca62;
+}
+
+#six .MRmenu .MRyellow {
+    grid-area: MRyellow;
+    background-color: #fdcd56;
+    box-shadow: inset 0px -5px 0px #f5b945;
+}
+
+#six .MRmenu .MRmyacount {
+    grid-area: MRmyacount;
+    background-color: #ac92ea;
+    box-shadow: inset 0px -5px 0px #9579da;
+}
+
+#six .MRmenu .MRshop {
+    grid-area: MRshop;
+    background-color: #f76c82;
+    box-shadow: inset 0px -5px 0px #d94452;
+}
+
+#six .MRmenu .MRlabs {
+    grid-area: MRlabs;
+    background-color: #fa6c51;
+    box-shadow: inset 0px -5px 0px #e8553e;
+}
+
+#six .MRmenu .MRstatistics {
+    grid-area: MRstatistics;
+    background-color: #ac92ea;
+    box-shadow: inset 0px -5px 0px #9579da;
+}
+
+#six .MRmenu .MRteacher {
+    grid-area: MRteacher;
+    background-color: #73b0f4;
+    box-shadow: inset 0px -5px 0px #4a88da;
+}
+
+#six .MRmenu .MRparrent {
+    grid-area: MRparrent;
+    background-color: #fdcd56;
+    box-shadow: inset 0px -5px 0px #f5b945;
+}
+
+
+
+#six .MRgame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .screen h1 {
-    font-size: 3.5vw;
+    font-size: calc(3.5vw * var(--multiplier));
     font-weight: 900;
     font-family: 'Rubik', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -151,7 +325,7 @@ button {
 
 .screen h2 {
     font-weight: 400;
-    font-size: 1.25vw;
+    font-size: calc(1.25vw * var(--multiplier));
     margin-top:0px;
 }
 .button {
@@ -163,9 +337,13 @@ button {
     opacity: 0.8;
     border-radius: 8px;
 }
+.button:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
 
 .button h2 {
-    font-size:1vw;
+    font-size:calc(1vw * var(--multiplier));
     margin:auto;
 }
 
@@ -174,8 +352,8 @@ button {
     position: absolute;
     border-radius: 50%;
     box-shadow: 0px 0px 5px 2px #bbcddf;
-    width: 20vw;
-    height:20vw;
+    width: calc(20vw * var(--multiplier));
+    height:calc(20vw * var(--multiplier));
     opacity: 0.5;
 }
 
@@ -222,12 +400,32 @@ button {
     border-radius:16px;
     padding-left:20px;
     padding-right:40px;
+    margin-top:20px;
+    margin-bottom:20px;
 }
 
-#six section article div {
+#six section article .mrContainer {
     padding:10%;
+    height:100%;
+}
+.mrContainer div {
+    overflow-y:scroll;
+    height: 200px;
+}
+.mrContainer div p {
+    font-size: 15pt;
 }
 
+.mrContainer div::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(71, 71, 71);
+    padding:2px;
+    border-radius: 5px;
+} 
+.mrContainer div::-webkit-scrollbar-thumb {
+    background-color: #f76c82;
+    border-radius: 5px;
+}
 
 
 #six section article h2 {
@@ -237,7 +435,7 @@ button {
 }
 #six section article h1 {
     font-weight: normal;
-    font-size:3vw;
+    font-size:calc(3vw * var(--multiplier));
     margin-top:0vw;
     margin-bottom:2vw;
 }
@@ -341,5 +539,9 @@ button {
     :root {
         --unit1: 1vh;
         --unit2: 1vw;
+        --multiplier: 1;
+    }
+    #six {
+        overflow: hidden;
     }
 }
