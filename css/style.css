@@ -20,6 +20,9 @@ button {
     border:none;
 }
 
+
+/* BOX CSS */
+
 #container {
     position: absolute;
     left: 0;
@@ -35,7 +38,7 @@ button {
     height: 500px;
     background: #18232b;
     border-radius: 50%;
-    transform: rotate(225deg);
+    transform: rotate(270deg);
     -webkit-transition: 100ms linear;
 }
 
@@ -51,6 +54,10 @@ button {
 .middle {
     flex: 1;
 }
+
+
+/* INDEX CSS */
+
 #one {
     display: flex;
     justify-content: center;
@@ -104,6 +111,9 @@ button {
 }
 
 
+
+/* MR CSS */
+
 #six {
     overflow-y: scroll; 
     display: grid;
@@ -148,7 +158,7 @@ button {
 
 
 #six .MRindex {
-    display: none;
+    display: flex;
     flex-direction: column;
     overflow: hidden;
     width: 100%;
@@ -305,16 +315,6 @@ button {
     box-shadow: inset 0px -5px 0px #f5b945;
 }
 
-
-
-#six .MRgame {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
 .screen h1 {
     font-size: calc(3.5vw * var(--multiplier));
     font-weight: 900;
@@ -328,6 +328,91 @@ button {
     font-size: calc(1.25vw * var(--multiplier));
     margin-top:0px;
 }
+
+#six .MRgame {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.backButton {
+    background-color: #fa6c51;
+    box-shadow: 0px 4px 0px #e8553e;
+    border-radius: 8px;
+    height: calc(2.5vw * var(--multiplier));
+    width: calc(8vw * var(--multiplier));
+    display: flex;
+}
+.backButton:hover, .doneButton:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+    -webkit-transition: 100ms;
+}
+
+.backButton h2 {
+    font-weight: 700;
+    margin: auto;
+}
+.screen .question {
+    font-size: calc(2.5vw * var(--multiplier));
+    margin: calc(1.5vw * var(--multiplier));
+}
+
+.userBlock {
+    display: flex;
+    flex-direction: row;
+}
+.userinput {
+    border-radius: 8px;
+    border: none;
+    height: calc(2vw * var(--multiplier));
+    width: calc(7vw * var(--multiplier));
+    box-shadow: 0px 4px 0px #b4b4b4;
+    padding-left: 5px;
+    font-size: calc(1vw * var(--multiplier));
+    margin-right:calc(0.25vw * var(--multiplier));
+}
+.doneButton {
+    border-radius: 8px;
+    height: calc(2vw * var(--multiplier));
+    width: calc(3vw * var(--multiplier));
+    background-color: #b4df80;
+    box-shadow: 0px 7px 0px #89c053;
+}
+
+.progress {
+    margin: calc(1.5vw * var(--multiplier));
+    width:calc(20vw * var(--multiplier));
+    height: calc(1vw * var(--multiplier));
+    border-radius: 8px;
+    background-color: #73b0f4;
+    box-shadow: 0px 4px 0px #4a88da;
+    position: relative;
+    padding: calc(0.3vw * var(--multiplier));
+}
+.progress div {
+    background-color: #b4df80;
+    width:10%;
+    height: 100%;
+    border-radius: 8px;
+    -webkit-transition: 200ms;
+}
+
+.scoreBox {
+    border-radius: 8px;
+    height: calc(2.5vw * var(--multiplier));
+    width: calc(8vw * var(--multiplier));
+    background-color: #ac92ea;
+    box-shadow: 0px 4px 0px #9579da;
+    display: flex;
+}
+.scoreBox h2 {
+    font-weight: 700;
+    margin: auto;
+}
+
+
 .button {
     width:15%;
     height:10%;
@@ -410,7 +495,7 @@ button {
 }
 .mrContainer div {
     overflow-y:scroll;
-    height: 200px;
+    height: 50%;
 }
 .mrContainer div p {
     font-size: 15pt;
@@ -460,7 +545,106 @@ button {
     align-items: center;
 }
 
+/* APP CSS */
 
+
+#seven {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-areas: 
+        'APPhd APPmn'
+        'APPse APPmn'
+    ;
+    grid-template-rows: 150px 4fr;
+    grid-template-columns: 5fr 3fr;
+}
+
+#seven header {
+    grid-area: APPhd;
+    display: flex;
+}
+header h1 {
+    margin: auto;
+    text-transform: uppercase;
+    font-size: calc(3.5vw * var(--multiplier));
+}
+
+#seven main {
+    background: purple;
+    grid-area: APPmn;
+}
+
+
+
+#seven section {
+    grid-area: APPse;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#seven section article {
+    width: 80%;
+    height:80%;
+    background: #1f2b33;
+    box-shadow: inset 0px 0px 10px 0px black;
+    border-radius:16px;
+    padding-left:20px;
+    padding-right:40px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#seven section article .mrContainer {
+    padding:10%;
+    height:100%;
+    position: relative;
+}
+#seven section article .mrContainer div {
+    height: 25vh;
+}
+
+#seven .mrContainer div::-webkit-scrollbar-thumb {
+    background-color: #73b0f4;
+    border-radius: 5px;
+}
+
+
+#seven section article h2 {
+    color:#73b0f4;
+    font-size:15pt;
+    font-weight: normal;
+}
+#seven section article h1 {
+    font-weight: normal;
+    font-size:calc(3vw * var(--multiplier));
+    margin-top:0vw;
+    margin-bottom:2vw;
+}
+#seven section article button {
+    width:200px;
+    height:50px;
+    border-radius: 8px;
+    background: #73b0f4;
+    margin-top:20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#seven section article button:hover {
+    cursor: pointer;
+    transform: translateX(-50%) scale(0.95);
+}
+
+
+
+
+
+
+
+
+/* INDEX CSS */
 .section {
     position: absolute;
     top: 50%;
@@ -519,7 +703,7 @@ button {
 }
 
 
-
+/* INDEX ANIMATIONS */
 @keyframes normalFadeIn {
     0% {opacity: 0;}
     25% {opacity: 0;}
@@ -535,6 +719,9 @@ button {
 }
 
 
+
+
+/* GENERAL SCALING */
 @media screen and (min-width: 700px) {
     :root {
         --unit1: 1vh;
@@ -542,6 +729,9 @@ button {
         --multiplier: 1;
     }
     #six {
+        overflow: hidden;
+    }
+    #seven {
         overflow: hidden;
     }
 }
