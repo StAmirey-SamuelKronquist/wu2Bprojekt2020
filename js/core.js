@@ -87,7 +87,7 @@ $(".MRindex .button").click(function () {
 })
 
 $(".mrContainer button").click(function () {
-    location.replace("https://matteraknaren.com/")
+    window.open('https://matteraknaren.com', '_blank');
 })
 $(".backButton").click(function () {
     $(".MRgame").hide();
@@ -99,6 +99,23 @@ $(".MRplay").click(function () {
     $(".MRmenu").hide();
 })
 
+
+$(".appIndex").click(function () {
+    $(".appIndex").fadeOut();
+    $(".appMenu").css("display", "flex");
+})
+$(".appMenuButton").click(function () {
+    $(".appMenu").hide();
+    $(".appIndex").css("display", "flex");
+})
+$(".shield").click(function () {
+    $(".appMenu").hide();
+    $(".appGame").css("display", "flex");
+})
+$(".appGameButton").click(function () {
+    $(".appMenu").css("display", "flex");
+    $(".appGame").hide();
+})
 
 
 
