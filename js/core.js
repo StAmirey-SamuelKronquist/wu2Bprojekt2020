@@ -129,6 +129,106 @@ $("#two section article h2").click(function () {
 })
 
 
+let projectInfo = {
+    card1 : {
+        color : '#73b0f4',
+        title : 'Beställ en Hemsida',
+        main : `
+            <b>Things</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <button></button>
+        `
+    },
+    card2 : {
+        color : '#f76c82',
+        title : 'MatteRäknaren',
+        main : `
+            <b>Things</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <button></button>
+        `
+    },
+    card3 : {
+        color : '#9579da',
+        title : 'Utmana, Tävla, Vinn',
+        main : `
+            <b>Things</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <button></button>
+        `
+    },
+    card4 : {
+        color : '#97ca62',
+        title : 'o44´s Kurser',
+        main : `
+            <b>Things</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <button></button>
+        `
+    },
+    card5 : {
+        color : '#fdcd56',
+        title : 'Köp Steam-Bot',
+        main : `
+            <b>Things</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <b>Others</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim mollitia ad ducimus quod ullam voluptatum quas eum animi quae? Magnam quam consequatur magni est quaerat quidem nesciunt, reiciendis ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad.</p>
+            <button></button>
+        `
+    }
+}
+
+let activeProject = "hemsidor";
+$(".card").click(function () {
+    $(".card").toggleClass('heightToggle');
+    
+    let id = $(this).attr('id')
+    setTimeout(function() {
+        document.documentElement.style.setProperty('--projectColor', projectInfo[id].color)
+        $("#five main article h1").text(projectInfo[id].title);
+        $("#five main article div").empty();
+        $("#five main article div").append(projectInfo[id].main);
+        $(".card").toggleClass('heightToggle')
+    }, 500);
+})
+
+
+
+
 // MR Question : 
 let answer;
 let onQuestion = 1;

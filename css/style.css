@@ -6,6 +6,7 @@
     --unit2: 1vh;
     --multiplier: 2;
     --appMultiplier : 1;
+    --projectColor : #73b0f4
 }
 
 html {
@@ -153,15 +154,15 @@ button {
     align-items: center;
     color: black;
 }
-#two header h1 {
+#two header h1, #five section h1 {
     font-size: calc(10vw * var(--multiplier));
 }
-#two header .the {
+#two header .the, #five section .the {
     font-size: calc(3.5vw * var(--multiplier));
     margin-top: calc(-3.5vw * var(--multiplier));
     margin-right: calc(-3.5vw * var(--multiplier));
 }
-#two header .project {
+#two header .project, #five section .project {
     font-size: calc(3.5vw * var(--multiplier));
     margin-top: calc(14vw * var(--multiplier));
     margin-left: calc(-7.5vw * var(--multiplier));
@@ -178,10 +179,10 @@ button {
     text-align: center;
     margin: auto;
     border-top: solid 2px black;
-    padding: 10%;
+    padding: 5% 10% 10% 10%;
 }
 #two main h1 {
-    color: #9579da;
+    color: #949494;
 }
 #two main b {
     display: block;
@@ -399,8 +400,212 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-top: 2px solid black;
 }
 
+
+
+/* PROJECTS CSS */
+
+#five {
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: 
+        'PROhd'
+        'PROmn'
+        'PROnv'
+    ;
+    grid-template-rows: 100px 1fr 50vw;
+    grid-template-columns: 1fr;
+}
+
+#five header {
+    grid-area: PROhd;
+    display: flex;
+}
+#five header h1 {
+    margin: auto;
+    margin-bottom: 0;
+    font-size: 35pt;
+}
+
+#five main {
+    grid-area: PROmn;
+    display: flex;
+    position: relative;
+}
+#five main article {
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    background: #1f2b33;
+    box-shadow: inset 0px 0px 10px 0px black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+#five main article h1 {
+    font-weight: 500;
+    color: var(--projectColor);
+}
+#five main article div {
+    width: 80%;
+    height: 350px;
+    overflow-y: scroll;
+}
+#five main article b {
+    color: rgb(187, 187, 187);
+}
+#five main article button {
+    margin-left: 50%;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 45px;
+    border-radius: 8px;
+    background-color: var(--projectColor);
+    transform: translateX(-50%);
+}
+#five main article button:hover {
+    cursor: pointer;
+    transform: scale(0.95) translateX(-50%);
+    -webkit-transition: 100ms linear;
+}
+
+#five main article div::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(71, 71, 71);
+    padding:2px;
+    border-radius: 5px;
+} 
+#five main article div::-webkit-scrollbar-thumb {
+    background-color: var(--projectColor);
+    border-radius: 5px;
+}
+
+#five nav {
+    grid-area: PROnv;
+    width: 95vw;
+    height: 95vw;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%) translateX(-50%);
+}
+
+#five section {
+    grid-area: PROse;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+
+.card {
+    user-select: none;
+    position: absolute;
+    border-radius: 16px;
+    width: 35%;
+    height: 100%;
+    -webkit-transition: 100ms linear;
+    display: flex;
+    justify-content: center;
+}
+.card h2 {
+    font-size: 3.5vw;
+}
+.card:hover {
+    height: 120%;
+    cursor: pointer;
+}
+
+
+#card1 {
+    color: #73b0f4;
+}
+#card2 {
+    color: #f76c82;
+    transform: rotate(30deg);
+}
+#card3 {
+    color: #9579da;
+    transform: rotate(-30deg);
+}
+#card4 {
+    color: #97ca62;
+    transform: rotate(60deg);
+}
+#card5 {
+    color: #fdcd56;
+    transform: rotate(-60deg);
+}
+.heightToggle {
+    height: 0%;
+    -webkit-transition: 100ms linear;
+}
+.heightToggle h2 {
+    opacity: 0;
+}
+
+.light {
+    background-color: #21343f;
+}
+.normal {
+    background-color: #1f2b33;
+}
+.dark {
+    background-color: #121b20;
+}
+
+@media screen and (min-width: 600px) {
+    #five {
+        grid-template-rows: 100px 1fr 300px;
+    }
+    #five nav {
+        width: 550px;
+        height: 550px;
+    }
+    .card h2 {
+        font-size: 15pt;
+    }
+}
+
+
+@media screen and (min-width: 1250px) {
+    #five {
+        grid-template-areas: 
+            'PROhd PROse'
+            'PROmn PROse'
+            'PROmn PROnv'
+        ;
+        grid-template-rows: 100px 1fr 300px;
+        grid-template-columns: 1fr 600px;
+    }
+    #five section {
+        display: flex;
+    }
+    #five main article div {
+        height: calc(80vh - 150px);
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #five {
+        grid-template-rows: 100px 1fr 400px;
+        grid-template-columns: 1fr 800px;
+    }
+    #five nav {
+        width: 600px;
+        height: 600px;
+    }
+}
 
 
 

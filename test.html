@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        html {
+            overflow: hidden;
+        }
+        .container {
+            width: 100vw;
+            height: 100vw;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            bottom: -50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            position: absolute;
+            border-radius: 16px;
+            width: 35%;
+            height: 100%;
+            -webkit-transition: 100ms linear;
+        }
+        .card:hover {
+            height: 120%;
+            cursor: pointer;
+        }
+
+        #card2 {
+            transform: rotate(30deg);
+        }
+        #card3 {
+            transform: rotate(-30deg);
+        }
+        #card4 {
+            transform: rotate(60deg);
+        }
+        #card5 {
+            transform: rotate(-60deg);
+        }
+        .heightToggle {
+            height: 0%;
+            -webkit-transition: 100ms linear;
+        }
+
+        .light {
+            background-color: #21343f;
+        }
+        .normal {
+            background-color: #1f2b33;
+        }
+        .dark {
+            background-color: #18232b;
+        }
+
+        @media screen and (min-width: 100vh) {
+            .container {
+                width: 100vh;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card light" id="card5"></div>
+        <div class="card light" id="card4"></div>
+        <div class="card normal" id="card3"></div>
+        <div class="card normal" id="card2"></div>
+        <div class="card dark" id="card1"></div>
+    </div>
+</body>
+<script src="/js/core.js"></script>
+
+</html>
