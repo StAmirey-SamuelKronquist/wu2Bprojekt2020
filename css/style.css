@@ -5,6 +5,7 @@
     --unit1: 1vw;
     --unit2: 1vh;
     --multiplier: 2;
+    --appMultiplier : 1;
 }
 
 html {
@@ -38,7 +39,7 @@ button {
     height: 500px;
     background: #18232b;
     border-radius: 50%;
-    transform: rotate(270deg);
+    transform: rotate(45deg);
     -webkit-transition: 100ms linear;
 }
 
@@ -108,6 +109,298 @@ button {
     animation-name: rightFadeIn;
     animation-duration: 3s;
 }
+
+
+
+
+/* ABOUT o44 CSS */
+#two {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+#two .o44Container {
+    grid-template-areas: 
+        'o44hd'
+        'o44mn'
+        'o44ft'
+        'o44se'
+    ;
+    grid-template-rows: 4fr 2fr 1fr 4fr;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 150vh;
+}
+#two::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(71, 71, 71);
+    padding:2px;
+    border-radius: 5px;
+} 
+#two::-webkit-scrollbar-thumb {
+    background-color: #9579da;
+    border-radius: 5px;
+}
+
+
+
+
+#two header {
+    grid-area: o44hd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+#two header h1 {
+    font-size: calc(10vw * var(--multiplier));
+}
+#two header .the {
+    font-size: calc(3.5vw * var(--multiplier));
+    margin-top: calc(-3.5vw * var(--multiplier));
+    margin-right: calc(-3.5vw * var(--multiplier));
+}
+#two header .project {
+    font-size: calc(3.5vw * var(--multiplier));
+    margin-top: calc(14vw * var(--multiplier));
+    margin-left: calc(-7.5vw * var(--multiplier));
+}
+
+
+#two main {
+    grid-area: o44mn;
+    display: flex;
+}
+#two main div {
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    border-top: solid 2px black;
+    padding: 10%;
+}
+#two main h1 {
+    color: #9579da;
+}
+#two main b {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+#two footer {
+    grid-area: o44ft;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#two section {
+    grid-area: o44se;
+    display: block;
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+}
+#two section article {
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #22323d;
+    box-shadow: 3px 3px 5px black, inset 0px 0px 5px rgba(255, 255, 255, 0.13);
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-left: 10%;
+    position: relative;
+    -webkit-transition: 200ms linear;
+}
+#two section .end {
+    margin-bottom: 50px;
+}
+#two section article div {
+    width: 80%;
+    height: 100px;
+    overflow: hidden;
+    -webkit-transition: 200ms linear;
+}
+#two section article h1 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 25pt;
+    font-weight: 500;
+    color: rgb(214, 214, 214);
+}
+#two section article h2 {
+    font-size: 30pt;
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+    transform: rotate(90deg);
+    user-select: none;
+    -webkit-transition: 100ms linear;
+}
+#two section article h2:hover {
+    font-size: 25pt;
+    cursor: pointer;
+    
+}
+#two section::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(71, 71, 71);
+    padding:2px;
+    border-radius: 5px;
+} 
+#two section::-webkit-scrollbar-thumb {
+    background-color: #9579da;
+    border-radius: 5px;
+}
+
+#two section .open {
+    height: auto;
+}
+#two section .open div {
+    height: auto;
+    padding-bottom: 25px;
+}
+#two section .open h2 {
+    transform: rotate(-90deg);
+    font-size: 25pt;
+}
+
+
+
+.green {
+    color: #97ca62;
+}
+.yellow {
+    color: #fdcd56;
+}
+.blue {
+    color: #73b0f4;
+}
+.purple {
+    color: #9579da;
+}
+.red {
+    color: #f76c82;
+}
+
+
+
+
+
+/* EMPLOYEE CSS */
+
+
+.employee {
+    display: grid;
+    grid-template-areas: 
+        'SAMhd'
+        'SAMmn'
+        'SAMse'
+        'SAMft'
+    ;
+    grid-template-rows: 0.5fr 4fr 5fr 0.5fr;
+}
+
+.employee header {
+    grid-area: SAMhd;
+    display: flex;
+    align-items: center;
+}
+.employee header h2 {
+    font-size: 20pt;
+    margin-left: 10px;
+    letter-spacing: calc(0.125vw * var(--multiplier));
+    color: #b4df80;
+    font-weight: 500;
+}
+#four header h2 {
+    color: #fa6c51;
+}
+
+.employee main {
+    grid-area: SAMmn;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.employee main div {
+    background-color: gray;
+    width:  calc(36 * var(--unit2));
+    height: calc(36 * var(--unit2));
+    border-radius: 50%;
+    box-shadow: inset 0px 0px var(--unit2) var(--unit2) black;
+}
+
+
+.employee section {
+    grid-area: SAMse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.employee article {
+    background: #1f2b33;
+    box-shadow: inset 0px 0px 10px 0px black;
+    border-radius: 8px;
+    width: 90%;
+    height: calc(90vh / ( 1 + 1 / (3 - var(--multiplier))));
+    position: relative;
+}
+
+.employee section h1 {
+    text-align: center;
+    font-size: calc(3vw * var(--multiplier));
+    margin-bottom: 1%;
+}
+.employee section p {
+    margin: auto 5% 5% 5%;
+    font-size: 11pt;
+}
+.employee section b {
+    margin: 2% 5% 2% 5%;
+    font-size: 11pt;
+    color: #b4df80;
+}
+#four section b {
+    color: #fa6c51;
+}
+
+.employee section div {
+    overflow-y: scroll;
+    margin-bottom: 10%;
+    height: 75%;
+}
+.employee section div::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(71, 71, 71);
+    padding:2px;
+    border-radius: 5px;
+} 
+.employee section div::-webkit-scrollbar-thumb {
+    background-color: #b4df80;
+    border-radius: 5px;
+}
+#four section div::-webkit-scrollbar-thumb {
+    background-color: #fa6c51;
+}
+
+
+
+.employee footer {
+    grid-area: SAMft;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 
 
 
@@ -440,6 +733,14 @@ button {
     height:calc(20vw * var(--multiplier));
     opacity: 0.5;
 }
+#seven .movingCircle {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 2px #bbcddf;
+    width: 30vh;
+    height: 30vh;
+    opacity: 0.5;
+}
 
 #movingCircle1 {
     animation: rotate 15s alternate infinite;
@@ -450,6 +751,9 @@ button {
 
 
 @media screen and (max-width: 700px) {
+    :root {
+        --appMultiplier : 0.75;
+    }
     #six {
         grid-template-areas: 
         'hd6'
@@ -457,6 +761,21 @@ button {
         'se6';
         grid-template-rows: 150px 1fr 1fr;
         grid-template-columns: 1fr;  
+    }
+    .employee section div {
+        height: 75%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .employee section h1 {
+        font-size: 27pt;
+    }
+    .employee section b, .employee section p {
+        font-size: 12pt;
+    }
+    .employee header h2 {
+        font-size: 30pt;
     }
 }
 
@@ -557,21 +876,38 @@ button {
     overflow-y: scroll;
     display: grid;
     grid-template-areas: 
-        'APPhd APPmn'
-        'APPse APPmn'
+        'APPhd'
+        'APPse'
     ;
-    grid-template-rows: 150px 4fr;
-    grid-template-columns: 5fr 3fr;
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 1fr;
 }
+
+#seven .mainContainer {
+    display: flex;
+    height: 75vh;
+    width: 120vw;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9vw;
+    -webkit-transition: 500ms;
+}
+
+
 
 #seven header {
     grid-area: APPhd;
     display: flex;
+    width: 100vw;
 }
-header h1 {
+#seven .mainContainer header {
+    display: none;
+}
+
+#seven header h1 {
     margin: auto;
     text-transform: uppercase;
-    font-size: calc(3.5vw * var(--multiplier));
+    font-size: 5vh;
 }
 
 #seven main {
@@ -581,8 +917,8 @@ header h1 {
 
 #seven main article {
     margin: auto;
-    width: 30vw;
-    height: 45vw;
+    width: calc(47vh * var(--appMultiplier));
+    height: calc(70vh * var(--appMultiplier));
     border-radius: 8px;
     background: black;
     border-bottom: 1vw solid black;
@@ -622,10 +958,10 @@ header h1 {
     animation: scale alternate 15s infinite;
 }
 .appIndex h1 {
-    font-size: 4vw;
-    letter-spacing: 1vw;
-    margin-top: -7vw;
-    margin-bottom: 8vw;
+    font-size: 5vh;
+    letter-spacing: 1.5vh;
+    margin-top: -15vh;
+    margin-bottom: 12vh;
 }
 
 
@@ -658,21 +994,22 @@ header h1 {
 }
 
 
-.appMenu header {
+#seven .appMenu header {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 .appMenu header h1 {
-    font-size: 3vw;
-    letter-spacing: 1vw;
+    font-size: 4vh;
+    letter-spacing: 1vh;
     margin: 0px;
 }
 .appMenu header h2 {
     margin: 0px;
-    font-size: 2vw;
-    letter-spacing: .75vw;
+    font-size: 2.5vh;
+    letter-spacing: 1vh;
 }
 
 #seven .appMenu main {
@@ -683,8 +1020,8 @@ header h1 {
     background: none;
 }
 .appMenu main .mainCircle {
-    width: 20vw;
-    height: 20vw;
+    width: 30vh;
+    height: 30vh;
     border: 2px solid #4A88DA;
     border-radius: 50%;
     background-color: #1C2936;
@@ -737,9 +1074,9 @@ header h1 {
     margin: auto;
     width: 0;
     height: 0;
-    border-top: 1vw solid transparent;
-    border-bottom: 1vw solid transparent;
-    border-left: 2vw solid #B4DF80;
+    border-top: 1.5vh solid transparent;
+    border-bottom: 1.5vh solid transparent;
+    border-left: 3vh solid #B4DF80;
     transform: translateX(25%);
 }
 
@@ -766,37 +1103,37 @@ header h1 {
     padding-right: 7.5%;
 }
 .appCon .appText h1 {
-    font-size: 2vw;
+    font-size: 3vh;
     font-weight: 500;
-    margin-bottom: -0.5vw;
+    margin-bottom: -0.5vh;
 }
 .appCon .appText p {
-    font-size: 0.8vw;
+    font-size: 1vh;
 }
 
 
 .appMenu footer, .appGame footer {
-    height: 100px;
+    height: 12.5%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #8C8C8C;
 }
 .appMenu footer h1, .appGame footer h1 {
-    font-size: 2.5vw;
+    font-size: 3.5vh;
     font-weight: 600;
 }
 .appMenu footer h2, .appGame footer h2 {
-    font-size: 1vw;
+    font-size: 1.5vh;
     font-weight: 500;
 }
 .appMenu footer .the, .appGame footer .the {
-    margin-top: -1.1vw;
-    margin-right: -1vw;
+    margin-top: -1.75vh;
+    margin-right: -1.5vh;
 }
 .appMenu footer .project, .appGame footer .project {
-    margin-top: 4vw;
-    margin-left: -2vw;
+    margin-top: 5.5vh;
+    margin-left: -2vh;
 }
 
 
@@ -812,7 +1149,7 @@ header h1 {
     width: 100%;
 }
 
-.appGame header {
+#seven .appGame header {
     height: 20%;
     width: 100%;
     position: relative;
@@ -829,7 +1166,7 @@ header h1 {
 }
 
 .appGameButton h2 {
-    font-size: 1.5vw;
+    font-size: 1.5vh;
     font-weight: 500;
     margin: auto;
     text-transform: uppercase;
@@ -843,11 +1180,11 @@ header h1 {
     width: 100%;
 }
 .appGame main h2 {
-    font-size: 2vw;
+    font-size: 2.5vh;
 }
 .appGame main h1 {
-    margin-top: 10%;
-    font-size: 3vw;
+    margin-top: 17.5%;
+    font-size: 4vh;
 }
 
 .appGame main div {
@@ -858,20 +1195,20 @@ header h1 {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     border: none;
-    height: calc(2vw * var(--multiplier));
-    width: calc(7vw * var(--multiplier));
+    height: 3vh;
+    width: 10vh;
     box-shadow: 0px 4px 0px #b4b4b4;
     padding-left: 5px;
-    font-size: calc(1vw * var(--multiplier));
-    margin-right:calc(0.25vw * var(--multiplier));
+    font-size: 1.5vh;
+    margin-right:.3vh;
 }
 .appGame main button {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    height: calc(2vw * var(--multiplier));
-    width: calc(3vw * var(--multiplier));
+    height: 3.25vh;
+    width: 4.5vh;
     background-color: #b4df80;
-    box-shadow: 0px 7px 0px #89c053;
+    box-shadow: 0px 4px 0px #89c053;
 }
 
 .appGameButton:hover, .appGame main button:hover {
@@ -880,22 +1217,6 @@ header h1 {
     -webkit-transition: 100ms;
 }
 
-@media screen and (max-width: 1100px) {
-    #seven {
-        width: 100vw;
-        overflow-y: scroll;
-        display: grid;
-        grid-template-areas: 
-            'APPhd'
-            'APPse'
-        ;
-        grid-template-rows: 150px 1fr;
-        grid-template-columns: 1fr;
-    }
-    #seven main {
-        display: none;
-    }
-}
 
 
 
@@ -907,23 +1228,26 @@ header h1 {
     justify-content: center;
 }
 #seven section article {
-    width: 80%;
-    height:90%;
+    height: calc(70vh * var(--appMultiplier));
+    width: calc(70vh * var(--appMultiplier));
     background: #1f2b33;
     box-shadow: inset 0px 0px 10px 0px black;
-    border-radius:16px;
-    padding-left:20px;
-    padding-right:40px;
-    margin-top:20px;
-    margin-bottom:20px;
+    border-radius: 16px;
+    margin: calc(2vh * var(--appMultiplier));
+    position: relative;
+    
 }
 #seven section article .mrContainer {
-    padding:10%;
-    height:100%;
+    height: calc(58vh * var(--appMultiplier));
     position: relative;
+    width: calc(60vh * var(--appMultiplier));
+    display: flex;
+    padding: 5vh 5vw 5vh 5vw;
+    flex-direction: column;
 }
 #seven section article .mrContainer div {
-    height: 35vh;
+    height: auto;
+    flex: 1;
 }
 
 #seven .mrContainer div::-webkit-scrollbar-thumb {
@@ -960,6 +1284,38 @@ header h1 {
 
 
 
+@media screen and (min-width: 1100px) {
+    #seven .mainContainer {
+        display: grid;
+        grid-template-areas: 
+            'APPhd APPmn'
+            'APPse APPmn'
+        ;
+        width: 100vw;
+        height: 100vh;
+        grid-template-rows: 100px 1fr;
+        grid-template-columns: 5fr 3fr;
+        margin-left: auto;
+    }
+    #seven header {
+        display: none;
+        width: auto;
+    }
+    #seven .mainContainer header {
+        display: flex;
+    }
+    #seven section article {
+        width: 90%;
+    }
+    #seven section article .mrContainer {
+        width: 90%;
+        padding: 5%;
+    }
+    #seven main article {
+        width: 30vw;
+        height: 45vw;
+    }
+}
 
 
 
@@ -1053,6 +1409,33 @@ header h1 {
         overflow: hidden;
     }
     #seven {
+        overflow: hidden;
+    }
+    .employee {
+        display: grid;
+        grid-template-areas: 
+            'SAMhd SAMmn'
+            'SAMse SAMmn'
+            'SAMft SAMmn'
+        ;
+        grid-template-rows: 0.5fr 4fr 0.5fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #two {
+        overflow: hidden;
+    }
+    #two .o44Container {
+        display: grid;
+        grid-template-areas: 
+            'o44hd o44se'
+            'o44mn o44se'
+            'o44ft o44se'
+        ;
+        grid-template-rows: 4fr 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        width: 100vw;
+        height: 100vh;
         overflow: hidden;
     }
 }

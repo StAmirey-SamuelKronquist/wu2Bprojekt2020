@@ -117,7 +117,16 @@ $(".appGameButton").click(function () {
     $(".appGame").hide();
 })
 
+$(".mrContainer").click(function () {
+    $(".mainContainer").css("margin-left", "9vw");
+})
+$(".appContainer").click(function () {
+    $(".mainContainer").css("margin-left", "-47vw");
+})
 
+$("#two section article h2").click(function () {
+    $(`#${$(this).attr('value')}`).toggleClass("open");
+})
 
 
 // MR Question : 
