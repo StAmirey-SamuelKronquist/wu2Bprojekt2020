@@ -8,79 +8,207 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
     <style>
-        html {
-            overflow: hidden;
-        }
-        .container {
-            width: 100vw;
-            height: 100vw;
-            background-color: black;
-            border-radius: 50%;
+        .backgroundContainer {
             position: absolute;
             left: 0;
-            bottom: -50%;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .boxarea {
+            margin: 0;
+            position: relative;
+            width: 100%;
+            height: 100%;            
             display: flex;
             justify-content: center;
             align-items: center;
+            background: linear-gradient(-45deg, #040507, #18232b, #274255);
+            background-size: 400% 400%;
+            animation: moveBackground 10s ease-in-out infinite;
         }
-
-        .card {
+        .boxarea li {
             position: absolute;
-            border-radius: 16px;
-            width: 35%;
-            height: 100%;
-            -webkit-transition: 100ms linear;
+            display: flex;
+            list-style: none;
         }
-        .card:hover {
-            height: 120%;
-            cursor: pointer;
-        }
-
-        #card2 {
-            transform: rotate(30deg);
-        }
-        #card3 {
-            transform: rotate(-30deg);
-        }
-        #card4 {
-            transform: rotate(60deg);
-        }
-        #card5 {
-            transform: rotate(-60deg);
-        }
-        .heightToggle {
+        .boxarea li div {
+            margin: auto;
+            width: 0%;
             height: 0%;
-            -webkit-transition: 100ms linear;
         }
 
-        .light {
-            background-color: #21343f;
+        .boxarea li:nth-child(1) {
+            width: 10vh;
+            height: 10vh;
+            animation: rotation 12s linear infinite, animateMove1 12s linear infinite;
         }
-        .normal {
-            background-color: #1f2b33;
-        }
-        .dark {
-            background-color: #18232b;
+        .boxarea li:nth-child(1) div {
+            background: radial-gradient(rgba(115, 175, 244, 0.2), rgba(115, 175, 244, 0));
+            box-shadow: 0px 0px 1vh #73b0f4;
+            animation: scaling 12s linear infinite;
         }
 
-        @media screen and (min-width: 100vh) {
-            .container {
-                width: 100vh;
-                height: 100vh;
-            }
+        .boxarea li:nth-child(2) {
+            width: 20vh;
+            height: 20vh;
+            animation: rotation 15s linear infinite 2s, animateMove4 15s linear infinite 2s;
+        }
+        .boxarea li:nth-child(2) div {
+            background: radial-gradient(rgba(152, 202, 98, 0.2), rgba(152, 202, 98, 0));
+            box-shadow: 0px 0px 1vh #98ca62;
+            animation: scaling 15s infinite 2s;
+        }
+
+        .boxarea li:nth-child(3) {
+            width: 15vh;
+            height: 15vh;
+            animation: rotation 12s linear infinite 4s, animateMove8 12s linear infinite 4s;
+        }
+        .boxarea li:nth-child(3) div {
+            background: radial-gradient(rgba(247, 108, 130, 0.2), rgba(247, 108, 130, 0));
+            box-shadow: 0px 0px 1vh #f76c82;
+            animation: scaling 12s infinite 4s;
+        }
+
+        .boxarea li:nth-child(4) {
+            width: 12vh;
+            height: 12vh;
+            animation: rotation 10s linear infinite 5s, animateMove6 10s linear infinite 5s;
+        }
+        .boxarea li:nth-child(4) div {
+            background: radial-gradient(rgba(149, 121, 218, 0.2), rgba(149, 121, 218, 0));
+            box-shadow: 0px 0px 1vh #9579da;
+            animation: scaling 10s infinite 5s;
+        }
+
+        .boxarea li:nth-child(5) {
+            width: 17vh;
+            height: 17vh;
+            animation: rotation 17s linear infinite 7s, animateMove2 17s linear infinite 7s;
+        }
+        .boxarea li:nth-child(5) div {
+            background: radial-gradient(rgba(253, 205, 86, 0.2), rgba(253, 205, 86, 0));
+            box-shadow: 0px 0px 1vh #fdcd56;
+            animation: scaling 17s infinite 7s;
+        }
+
+        .boxarea li:nth-child(6) {
+            width: 8vh;
+            height: 8vh;
+            animation: rotation 8s linear infinite 7.5s, animateMove7 8s linear infinite 7.5s;
+        }
+        .boxarea li:nth-child(6) div {
+            background: radial-gradient(rgba(250, 108, 81, 0.2), rgba(250, 108, 81, 0));
+            box-shadow: 0px 0px 1vh #fa6c51;
+            animation: scaling 8s infinite 7.5s;
+        }
+
+        .boxarea li:nth-child(7) {
+            width: 20vh;
+            height: 20vh;
+            animation: rotation 20s linear infinite 9s, animateMove5 20s linear infinite 9s;
+        }
+        .boxarea li:nth-child(7) div {
+            background: radial-gradient(rgba(115, 175, 244, 0.2), rgba(115, 175, 244, 0));
+            box-shadow: 0px 0px 1vh #73b0f4;
+            animation: scaling 20s infinite 9s;
+        }
+
+        .boxarea li:nth-child(8) {
+            width: 15vh;
+            height: 15vh;
+            animation: rotation 18s linear infinite 12s, animateMove3 18s linear infinite 12s;
+        }
+        .boxarea li:nth-child(8) div {
+            background: radial-gradient(rgba(247, 108, 130, 0.2), rgba(247, 108, 130, 0));
+            box-shadow: 0px 0px 1vh #f76c82;
+            animation: scaling 18s infinite 12s;
+        }
+
+
+        @keyframes moveBackground {
+            0% {background-position: 0 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0 50%;}
+        }
+
+        @keyframes animateMove1 {
+            0% {margin-left: 0; margin-top: 0;}
+            5% {margin-left: 0; margin-top: 0;}
+            100% {margin-left: 75vw; margin-top: 75vh;}
+        }
+        @keyframes animateMove2 {
+            0% {margin-left: 0;}
+            5% {margin-left: 0;}
+            100% {margin-left: 75vw;}
+        }
+        @keyframes animateMove3 {
+            0% {margin-left: 0; margin-top: 0;}
+            5% {margin-left: 0; margin-top: 0;}
+            100% {margin-left: 75vw; margin-top: -75vh;}
+        }
+        @keyframes animateMove4 {
+            0% {margin-top: 0;}
+            5% {margin-top: 0;}
+            100% {margin-top: -75vh;}
+        }
+        @keyframes animateMove5 {
+            0% {margin-left: 0; margin-top: 0;}
+            5% {margin-left: 0; margin-top: 0;}
+            100% {margin-left: -75vw; margin-top: -75vh;}
+        }
+        @keyframes animateMove6 {
+            0% {margin-left: 0;}
+            5% {margin-left: 0;}
+            100% {margin-left: -75vw;}
+        }
+        @keyframes animateMove7 {
+            0% {margin-left: 0; margin-top: 0;}
+            5% {margin-left: 0; margin-top: 0;}
+            100% {margin-left: -75vw; margin-top: 75vh;}
+        }
+        @keyframes animateMove8 {
+            0% {margin-top: 0;}
+            5% {margin-top: 0;}
+            100% {margin-top: 75vh;}
+        }
+
+        @keyframes rotation {
+            0% {transform: rotate(0deg)}
+            25% {transform: rotate(90deg)}
+            50% {transform: rotate(180deg)}
+            75% {transform: rotate(270deg)}
+            100% {transform: rotate(360deg)}
+        }
+        @keyframes scaling {
+            0% {width: 0%; height: 0%;}
+            10% {width: 100%; height: 100%;}
+            100% {width: 100%; height: 100%;}
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="card light" id="card5"></div>
-        <div class="card light" id="card4"></div>
-        <div class="card normal" id="card3"></div>
-        <div class="card normal" id="card2"></div>
-        <div class="card dark" id="card1"></div>
+    <div class="backgroundContainer">
+        <ul class="boxarea">
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+         </ul>
     </div>
+    
 </body>
-<script src="/js/core.js"></script>
+
+    <script>
+        
+    </script>
 
 </html>
