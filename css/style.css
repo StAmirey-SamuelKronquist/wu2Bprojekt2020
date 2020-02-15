@@ -238,7 +238,7 @@ button {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    transform: rotate(45deg);
+    transform: rotate(315deg);
     -webkit-transition: 100ms linear;
 }
 
@@ -351,15 +351,15 @@ button {
     color: #97ca62;
     user-select: none;
 }
-#two header h1, #five section h1 {
+#two header h1, #five section h1, #eight footer h1, .employee .emLogo h1 {
     font-size: calc(10vw * var(--multiplier));
 }
-#two header .the, #five section .the {
+#two header .the, #five section .the, #eight footer .the, .employee .emLogo .the {
     font-size: calc(3.5vw * var(--multiplier));
     margin-top: calc(-3.5vw * var(--multiplier));
     margin-right: calc(-3.5vw * var(--multiplier));
 }
-#two header .project, #five section .project {
+#two header .project, #five section .project, #eight footer .project, .employee .emLogo .project {
     font-size: calc(3.5vw * var(--multiplier));
     margin-top: calc(14vw * var(--multiplier));
     margin-left: calc(-7.5vw * var(--multiplier));
@@ -524,16 +524,27 @@ button {
 .employee main {
     grid-area: SAMmn;
     display: flex;
-    
     justify-content: center;
     align-items: center;
 }
 .employee main div {
     background-color: gray;
-    width:  calc(36 * var(--unit2));
-    height: calc(36 * var(--unit2));
+    width:  calc(40vh);
+    height: calc(40vh);
     border-radius: 50%;
     box-shadow: inset 0px 0px var(--unit2) var(--unit2) black;
+}
+
+.employee .emLogo {
+    display: none;
+    grid-area: SAMlogo;
+    justify-content: center;
+    align-items: center;
+    color: #73b0f4;
+    user-select: none;
+}
+#four .emLogo {
+    color: #fdcd56;
 }
 
 
@@ -544,7 +555,7 @@ button {
     align-items: center;
     flex-direction: column;
 }
-.employee article {
+.employee section article {
     background: #1f2b33;
     box-shadow: inset 0px 0px 10px 0px black;
     border-radius: 8px;
@@ -1404,12 +1415,12 @@ button {
     align-items: center;
     width: 100%;
 }
-.appMenu header h1 {
+#seven .appMenu header h1 {
     font-size: 4vh;
     letter-spacing: 1vh;
     margin: 0px;
 }
-.appMenu header h2 {
+#seven .appMenu header h2 {
     margin: 0px;
     font-size: 2.5vh;
     letter-spacing: 1vh;
@@ -1691,7 +1702,7 @@ button {
     #seven .mainContainer {
         display: grid;
         grid-template-areas: 
-            'APPhd APPmn'
+            'APPhd2 APPmn'
             'APPse APPmn'
         ;
         width: 100vw;
@@ -1706,6 +1717,12 @@ button {
     }
     #seven .mainContainer header {
         display: flex;
+        grid-area: APPhd2;
+        width: 100%;
+        height: 100%;
+    }
+    #seven .mainContainer header h1 {
+        margin-bottom: 0;
     }
     #seven section article {
         width: 90%;
@@ -1718,6 +1735,187 @@ button {
         width: 30vw;
         height: 45vw;
     }
+}
+
+
+
+
+/* Kontakt CSS */
+
+#eight {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'CONmn CONft'
+        'CONmn CONse'
+    ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+#eight header {
+    grid-area: CONhd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#eight header h1 {
+    font-size: 30pt;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+#eight section {
+    grid-area: CONse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#eight section article {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background: #1f2b33;
+    box-shadow: inset 0px 0px 10px 0px black;
+    padding: 20px;
+    border-radius: 8px;
+}
+#eight section article h1 {
+    font-size: 20pt;
+    margin: 0;
+}
+#eight section article input, #eight section article textarea {
+    border: none;
+    border-radius: 4px;
+    font-size: 11pt;
+    padding-left: 2px;
+}
+#eight section article input:nth-child(2) {
+    width: 100%;
+    height: 25px;
+}
+#eight section article textarea {
+    width: 100%;
+    flex: 1;
+    resize: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#eight section article div {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    position: relative;
+}
+#eight section article div input {
+    flex: 1;
+    height: 100%;
+}
+#eight section article div button {
+    height: calc(100% + 2px);
+    width: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: #97ca62;
+    color: white;
+}
+
+
+#eight main {
+    grid-area: CONmn;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #1f2b33;
+    box-shadow: inset 0px 0px 10px 0px black;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    margin: auto;
+    border-radius: 8px;
+}
+#eight main section article {
+    display: flex;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#eight main section:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#eight main section:nth-child(2) article {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 0px 0px 10px 0px black;
+}
+#eight main section:nth-child(2) h1 {
+    font-size: 25pt;
+    margin: 0;
+    color: #fdcd56;
+}
+#eight main section:nth-child(2) div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    
+}
+#eight main section article {
+    background: none;
+    box-shadow: none;
+}
+#eight main section:nth-child(3) {
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    position: relative;
+} 
+#eight main section:nth-child(3) article {
+    width: 40%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px 0px black;
+}
+#eight main section:nth-child(3) article h1 {
+    font-size: 17pt;
+}
+#eight main section:nth-child(3) article div:nth-child(1) {
+    width: 12vw;
+    height: 12vw;
+    background: black;
+    border-radius: 50%;
+}
+#eight main section:nth-child(3) article div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+}
+#eight main section:nth-child(3) article div:nth-child(3) p {
+    flex: 1;
+}
+
+#eight footer {
+    grid-area: CONft;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9579da;
+    user-select: none;
 }
 
 
@@ -1819,10 +2017,14 @@ button {
         grid-template-areas: 
             'SAMhd SAMmn'
             'SAMse SAMmn'
-            'SAMft SAMmn'
+            'SAMse SAMlogo'
+            'SAMft SAMlogo'
         ;
-        grid-template-rows: 0.5fr 4fr 0.5fr;
+        grid-template-rows: 0.5fr 2fr 2fr 0.5fr;
         grid-template-columns: 1fr 1fr;
+    }
+    .employee .emLogo {
+        display: flex;
     }
     
     #two {
