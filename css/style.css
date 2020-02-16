@@ -61,8 +61,8 @@ button {
 }
 
 .boxarea li:nth-child(1) {
-    width: 10vh;
-    height: 10vh;
+    width: calc(10 * var(--unit1));
+    height: calc(10 * var(--unit1));
     animation: rotation 12s linear infinite, animateMove1 12s linear infinite;
 }
 .boxarea li:nth-child(1) div {
@@ -72,8 +72,8 @@ button {
 }
 
 .boxarea li:nth-child(2) {
-    width: 20vh;
-    height: 20vh;
+    width: calc(20 * var(--unit1));
+    height: calc(20 * var(--unit1));
     animation: rotation 15s linear infinite 2s, animateMove4 15s linear infinite 2s;
 }
 .boxarea li:nth-child(2) div {
@@ -83,8 +83,8 @@ button {
 }
 
 .boxarea li:nth-child(3) {
-    width: 15vh;
-    height: 15vh;
+    width: calc(15 * var(--unit1));
+    height: calc(15 * var(--unit1));
     animation: rotation 12s linear infinite 4s, animateMove8 12s linear infinite 4s;
 }
 .boxarea li:nth-child(3) div {
@@ -94,8 +94,8 @@ button {
 }
 
 .boxarea li:nth-child(4) {
-    width: 12vh;
-    height: 12vh;
+    width: calc(12 * var(--unit1));
+    height: calc(12 * var(--unit1));
     animation: rotation 10s linear infinite 5s, animateMove6 10s linear infinite 5s;
 }
 .boxarea li:nth-child(4) div {
@@ -105,8 +105,8 @@ button {
 }
 
 .boxarea li:nth-child(5) {
-    width: 17vh;
-    height: 17vh;
+    width: calc(17 * var(--unit1));
+    height: calc(17 * var(--unit1));
     animation: rotation 17s linear infinite 7s, animateMove2 17s linear infinite 7s;
 }
 .boxarea li:nth-child(5) div {
@@ -116,8 +116,8 @@ button {
 }
 
 .boxarea li:nth-child(6) {
-    width: 8vh;
-    height: 8vh;
+    width: calc(8 * var(--unit1));
+    height: calc(8 * var(--unit1));
     animation: rotation 8s linear infinite 7.5s, animateMove7 8s linear infinite 7.5s;
 }
 .boxarea li:nth-child(6) div {
@@ -127,8 +127,8 @@ button {
 }
 
 .boxarea li:nth-child(7) {
-    width: 20vh;
-    height: 20vh;
+    width: calc(20 * var(--unit1));
+    height: calc(20 * var(--unit1));
     animation: rotation 20s linear infinite 9s, animateMove5 20s linear infinite 9s;
 }
 .boxarea li:nth-child(7) div {
@@ -138,8 +138,8 @@ button {
 }
 
 .boxarea li:nth-child(8) {
-    width: 15vh;
-    height: 15vh;
+    width: calc(15 * var(--unit1));
+    height: calc(15 * var(--unit1));
     animation: rotation 18s linear infinite 12s, animateMove3 18s linear infinite 12s;
 }
 .boxarea li:nth-child(8) div {
@@ -238,7 +238,7 @@ button {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    transform: rotate(315deg);
+    transform: rotate(0deg);
     -webkit-transition: 100ms linear;
 }
 
@@ -292,6 +292,11 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: rotation 50s linear infinite;
+    width: calc(80 * var(--unit1));
+    height: calc(80 * var(--unit1));
+    border-radius: 50%;
+    box-shadow: 0px 0px calc(1 * var(--unit1)) 0px white, inset 0px 0px calc(2 * var(--unit1)) 0px black;
 }
 
 .logo .the {
@@ -353,6 +358,9 @@ button {
 }
 #two header h1, #five section h1, #eight footer h1, .employee .emLogo h1 {
     font-size: calc(10vw * var(--multiplier));
+}
+#two header h1:hover, #five section h1:hover, #eight footer h1:hover, .employee .emLogo h1:hover {
+    cursor: pointer;
 }
 #two header .the, #five section .the, #eight footer .the, .employee .emLogo .the {
     font-size: calc(3.5vw * var(--multiplier));
@@ -1747,11 +1755,11 @@ button {
     height: 100vh;
     display: grid;
     grid-template-areas:
-        'CONmn CONft'
-        'CONmn CONse'
+        'CONmn'
+        'CONse'
     ;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 #eight header {
@@ -1911,7 +1919,7 @@ button {
 
 #eight footer {
     grid-area: CONft;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     color: #9579da;
@@ -1936,38 +1944,46 @@ button {
 .littleCircle {
     width: calc(5 * var(--unit2));
     height:calc(5 * var(--unit2));
-    box-shadow: inset 0px 0px 1vh 0px #121452;
-    background: black;
+    box-shadow: 0px 0px 1vh 0px #ffffff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     -webkit-transition: 500ms linear;
+    background-size: cover;
+    background-position: center;
+    animation: rotation 50s linear infinite reverse;
 }
 
 .littleCircle:hover {
-    width:calc(10 * var(--unit2));;
+    width:calc(10 * var(--unit2));
     cursor: pointer;
     border-radius: 5px;
+    color: rgb(173, 173, 173);
 }
 
 .littleCircle h1 {
     display: none;
     white-space: nowrap;
+    font-size: calc(1.5 * var(--unit2));
 }
 
-.c1 {
+#c1 {
     margin-left:calc(40 * var(--unit1));
+    background-image: url(/img/supervisor_account-24px.svg);
 }
-.c2 {
+#c2 {
     margin-left:calc(-40 * var(--unit1));
+    background-image: url(/img/code-24px.svg);
 }
-.c3 {
+#c3 {
     margin-top:calc(-40 * var(--unit1));
+    background-image: url(/img/contacts-24px.svg);
 }
-.c4 {
+#c4 {
     margin-top:calc(40 * var(--unit1));
+    background-image: url(/img/info-24px.svg);
 }
 
 .secondSec {
@@ -2043,4 +2059,17 @@ button {
         height: 100vh;
         overflow: hidden;
     }
+
+    #eight {
+        grid-template-areas:
+            'CONmn CONft'
+            'CONmn CONse'
+        ;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    #eight footer {
+        display: flex;
+    }
+
 }

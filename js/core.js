@@ -124,7 +124,31 @@ $(".littleCircle").hover(
     },
     function () {
         $(this).find("h1").hide();
-    })
+    }
+)
+let rotationInfo = {c1 : 90, c2: 180, c3 : 315, c4 : 45};
+$(".littleCircle").click(function () {
+    rotate(rotationInfo[$(this).attr('id')])
+})
+let rotate = (value) => {
+    console.log("here")
+    x = value;
+    closedItem = true;
+    $(".circle").css({
+        "-webkit-transition": "800ms linear",
+        "transform": "rotate(" + x + "deg)"
+    });
+    setTimeout(function () {
+        closedItem = false;
+        $(".circle").css({
+            "-webkit-transition": "100ms linear"
+        });
+    }, 800);
+}
+
+$("#two header h1, #five section h1, #eight footer h1, .employee .emLogo h1").click(function (){
+    rotate(0);
+});
 
 
 $(".MRlogout").click(function () {
