@@ -88,7 +88,7 @@
                 <!-- Vad görs på lektionen vecka 7? -->
             </td>
             <td>
-                Fixa klart MR sidan samt att börja på övriga. 
+                Fixa klart MR sidan samt att börja på övriga sidor. Försöka få färdigt det mesta av sidan förutom detaljer. 
                 <!-- Vad görs utanför lektionen vecka 7? -->
             </td>
         </tr>
@@ -107,6 +107,9 @@
         <tr>
             <td>9</td>
             <td>
+                Fixa skalfixar om sådana finns. Kolla igenom på olika enheter. 
+                Även börja med : 
+                Animationer på alla sidor för att skapa mer liv på sidorna. 
                 <!-- Vad görs på lektionen vecka 9? -->
             </td>
             <td>
@@ -117,6 +120,7 @@
         <tr>
             <td>10</td>
             <td>
+                Fixa alla textrutor - skriv i den info som ska vara där 
                 <!-- Vad görs på lektionen vecka 10? -->
             </td>
             <td>
@@ -127,6 +131,7 @@
         <tr>
             <td>11</td>
             <td>
+                    Buffertlektion
                 <!-- Vad görs på lektionen vecka 11? -->
             </td>
             <td>
@@ -137,6 +142,7 @@
         <tr>
             <td>12</td>
             <td>
+                Göra tester, minimera & validera koden, kolla igenom efter tomma alt för bilder och likannde. 
                 <!-- Vad görs på lektionen vecka 12? -->
             </td>
             <td>
@@ -166,6 +172,8 @@
     Planen är att till nästa vecka börja designen på en av delsidorna och även komma fram till det bästa sättet att skala alla sidor.
     I och med att alla sidor på sidan kommer vara relativt lika känns det som en bra idé att tidigt ha koll på att skalningen blir lätt att fixa.
     Blir därför mindre en pina i slutet då alla sidor är färdiga och jag märker att det är svårt att anpassa sidan även för större enheter (dator, platta)
+    Index : <img src="/img/index_added_menu.PNG" alt="">
+
 
     <h3>Lektion vecka 6</h3>
     <!-- Fyll på med dokumentation här. -->
@@ -173,11 +181,62 @@
     Det blir dock lite problem när det gällde att skala skärmen och titeln på ett fungerande sätt. Jag hade använt mig av enheten vw, vilket gjorde att när bredden ändrades på skärmen blev det ingen bra skalning. 
     Istället för att ändra alla taggar där jag använde mig av vw gjorde jag så att jag satte en variabel vid nämn "multiplier", vilket gjorde att jag kunde ändra den för att multiplicera min vw med olika värden. 
     Exempelvis : Vid desktop är multiplier 1, dvs 45x1=45 & vid mobil är multiplier 2, dvs 45x2=90. 
+    
     Nästa vecka ska jag fortsätta med den sista sidan på skärmen till Matteräknaren samt att börja fixa på den andra sidan. 
+
+    Första prototypen av Skärmen : 
+    <img src="/img/MR_before_screen.PNG" alt="">
+    Förstasidan (skärm) : 
+    <img src="/img/MR_added_index.PNG" alt="">
+    Spelsidan (skräm) - utan JavaScripten för att kunna köra uppgifterna : 
+    <img src="/img/MR_gameSite_withoutJS.PNG" alt="">
+    Spelsidan (skärm) - med JavaScript 
+    <img src="/img/MR_gameSite_withJS.PNG" alt="">
+
+    Layouten av sidan (utan skärm)
+    <img src="/img/MR_before_screen.PNG" alt="">
+
+    För skalning & anpassning mellan skärmstorlek - lade till en scroll på informationsrutan : 
+    <img src="/img/MR_textarea_withScroll.PNG" alt="">
 
     <h3>vecka 7</h3>
     <b>Period 1</b>
-    Ändrade grid i app från 1fr & 5fr --> 1fr & 4fr för att kunna centrera titeln i blocket utan att minska avståndet från toppen. Ändrade till 150px & 4fr för att få till en bra skalning!
+    Ändrade grid i app från 1fr & 5fr --> 1fr & 4fr för att kunna centrera titeln i blocket utan att minska avståndet från toppen. Ändrade om igen till 150px & 4fr för att få till en bra skalning!
+
+    Började arbeta med nästa sida, vilket är den sida där vi ska visa upp vår app. Min tanke är att göra färdigt de sidor med prototyperna av vår produkt först då jag tror att dessa blir svårast / jobbigast. 
+    Ett problem som jag snart märkte var att jag hade problem med att komma fram till vad som var det bästa sättet att lägga upp HTML:en . 
+    Problemet var att på mobilen skulle man kunna skifta mellan två "vyer" genom att klicka på en liten del av den vy som inte sågs (se bild).
+    Detta gjorde att dessa två blocken skulle behöva ligga i ett gemensamt större block. På dator däremot ville jag visa både de blocken plus titeln och det smidigaste sättet där var att använda sig av ett grid. 
+    Det krävdes dock att det inte låg ett block runt de två blocken då, så min lösning blev därmed att lägga en extra titel inuti den div som omslöt de två andra blocken.
+    Denna titel hade jag som standard dåld (mobil), men visade den när man var i desktop läge.
+
+    Bild på grid på desktop läge - innan ändring. Även här bestämde jag mig sen för att ändra så att titln hade en height på 150px för att jag tyckte att det gav bäst skalning. 
+    <img src="/img/APP_grid.PNG" alt="">
+
+    Första idén på hur skärmen ska fungera. Min första tanke var att precis som med Matteräknaren skapa en bild för hur mobilen skulle se ut. 
+    När jag var inne i illustrator och höll på såg jag dock att det jag ville åt gick att göra mycket smidigare med endast kod. 
+    När det gällde Matteräknaren ville jag skapa en monitor och den har många fler detaljer och former som exempelvis foten. 
+    En mobilram har däremot endast en border som är olika tjock beroende på om det exempelvis ska få plats kamera eller ej. Därmed valde jag att göra en border runt mobilskärmen istället för att lägga in en bild som bakgrund. 
+    Min tanke är att det går snabbare att läsa in lite css än en bild och dessutom kändes det som att det var lättare om jag ville anpassa mobilens storlek efter hand om allting var i kod.
+    <img src="/img/APP_phoneLayout.PNG" alt="">
+
+    Meny-sidan för Appen. Gick väldigt smidigt att göra, hade alla mått från figma modellen i och med att jag har jobbat med att designa denna prototyp på gränssnittet. Hade även själva koden för de snurrande cirklarna från Matteräknaren. 
+    <img src="/img/APP_menu.PNG" alt="">
+
+    Som nämnt ovan har jag haft mycket problem när det gäller hur jag ska fixa skalningen för sidan. Just nu har jag inte kommit på någon bra / smidig lösning till skalningen, så det får vänta. 
+    
+    Desktop vy - har ett grid :
+    <img src="/img/APP_problemWithScaling1.PNG" alt="">
+    Mobil vy , grid, men flex på blocken på nedre delen. Problem - Svårt att centrera de block som är klickat på (i detta fall mobilprototypen) & måste skala för att enheter (använder nu vw) :
+    <img src="/img/APP_problemWithScaling2.PNG" alt="">
+    Mobil vy, andra aktiv. Samma problem som med bilden ovan! 
+    <img src="/img/APP_problemWithScaling3.PNG" alt="">
+
+    Jag stötte även på problem gällade scrollen på textinformationen. På Matteräknaren-sidan lyckades jag få att texten hela tiden var 50% av blocket höjd och det som inte fick plats gick att scrolla fram. 
+    Av någon outgrundlig anledning fungerade dock detta inte på denna sidan, så jag löste det genom att sätta en specifik höjd i vh på själva textrutan. 
+    Det är dock inte en stabil lösning då det blir konstigt när man byter mellan enheter (layouten ändras). 
+    Bild på hur det inte fungerar : 
+    <img src="/img/APP_problemWithTextHeight.PNG" alt="">
 
     <h3>Lektion vecka 8</h3>
     <!-- Fyll på med dokumentation här. -->

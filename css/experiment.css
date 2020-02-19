@@ -1,0 +1,20 @@
+.block {
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    background: red;
+    display: flex;
+}
+
+.block p {
+    margin: auto;
+}
+
+.block:hover {
+    transform: scale(0.95);
+}
+
+
+.active {
+    background-color: yellow;
+}

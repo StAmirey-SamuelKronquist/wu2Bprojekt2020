@@ -240,6 +240,7 @@ button {
     border-radius: 50%;
     transform: rotate(0deg);
     -webkit-transition: 100ms linear;
+    user-select: none;
 }
 
 .box {
@@ -383,7 +384,7 @@ button {
     height: 100%;
     text-align: center;
     margin: auto;
-    border-top: solid 2px black;
+    border-top: solid 2px white;
     padding: 5% 10% 10% 10%;
 }
 #two main h1 {
@@ -536,11 +537,15 @@ button {
     align-items: center;
 }
 .employee main div {
-    background-color: gray;
     width:  calc(40vh);
     height: calc(40vh);
     border-radius: 50%;
     box-shadow: inset 0px 0px var(--unit2) var(--unit2) black;
+    background-size: cover;
+    background-color: white;
+}
+#four main div {
+    background-image: url('/img/PictureJonas.png')
 }
 
 .employee .emLogo {
@@ -719,8 +724,8 @@ button {
     display: none;
     justify-content: center;
     align-items: center;
-    color: black;
-    border-bottom: 2px solid black;
+    color: #f76c82;
+    border-bottom: 2px solid white;
     user-select: none;
 }
 
@@ -1953,7 +1958,6 @@ button {
     -webkit-transition: 500ms linear;
     background-size: cover;
     background-position: center;
-    animation: rotation 50s linear infinite reverse;
 }
 
 .littleCircle:hover {
@@ -1972,18 +1976,22 @@ button {
 #c1 {
     margin-left:calc(40 * var(--unit1));
     background-image: url(/img/supervisor_account-24px.svg);
+    animation: normalFadeIn 2s, rotation 50s linear infinite reverse;
 }
 #c2 {
     margin-left:calc(-40 * var(--unit1));
     background-image: url(/img/code-24px.svg);
+    animation: normalFadeIn 4s, rotation 50s linear infinite reverse;
 }
 #c3 {
     margin-top:calc(-40 * var(--unit1));
     background-image: url(/img/contacts-24px.svg);
+    animation: normalFadeIn 1s, rotation 50s linear infinite reverse;
 }
 #c4 {
     margin-top:calc(40 * var(--unit1));
     background-image: url(/img/info-24px.svg);
+    animation: normalFadeIn 3s, rotation 50s linear infinite reverse;
 }
 
 .secondSec {
