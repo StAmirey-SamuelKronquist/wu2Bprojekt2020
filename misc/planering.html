@@ -200,7 +200,6 @@
     <img src="/img/MR_textarea_withScroll.PNG" alt="">
 
     <h3>vecka 7</h3>
-    <b>Period 1</b>
     Ändrade grid i app från 1fr & 5fr --> 1fr & 4fr för att kunna centrera titeln i blocket utan att minska avståndet från toppen. Ändrade om igen till 150px & 4fr för att få till en bra skalning!
 
     Började arbeta med nästa sida, vilket är den sida där vi ska visa upp vår app. Min tanke är att göra färdigt de sidor med prototyperna av vår produkt först då jag tror att dessa blir svårast / jobbigast. 
@@ -238,6 +237,62 @@
     Bild på hur det inte fungerar : 
     <img src="/img/APP_problemWithTextHeight.PNG" alt="">
 
+
+    Nu började jag arbeta med nästa sidan, vilket blev startsidan för alla våra projekt. Meningen med den sidan är att ge en snabb överblick över de projekt vi har gjort och de projekt som vi kan genomföra åt en kund. 
+    Jag hade en idé här om att skapa en meny som såg ut som en spelhand när man spelar ett kortspel. Att man väljer ett av korten och att detta då ger en information inom det området. 
+    Därmed började jag med att utveckla själva korthanden för att få den att fungera som jag ville med animationer och väljandet av område. 
+    <img src="/img/PROJECT_developing.PNG" alt="">
+
+    För mobilen valde jag att som på de andra sidorna använda mig av ett simpelt grid med endast en kolumn.
+    <img src="/img/PROJECT_mobile_version.PNG" alt="">
+    På större enheter använde jag mig av ett grid med två kolumner och lade även till vår logga i en av kvadranterna. Varför jag valde att lägga till loggan var för att jag ville ha något mer som fyllde upp då det var större skärm (mer plats),
+    samtidigt ville jag helst inte lägga till mer text eller andra distraktioner som jag tror skulle gjort sidan mer klottrig. Därför valde jag att endast lägga till loggan. Senare ska jag även göra den klickbar så man enkelt kan ta sig tillbaka till förstasidan. 
+
+
+    Nästa sida att utveckla blev sidorna för att visa information om de anställda på företaget. Dessa sidor skulle alla vara edentiska med varandra, vilket gjorde att jag endast behövde göra en av denm. 
+    Jag hade både gjort en skiss för desktop och för mobil för denna design, men under processen blev det några ändringar : 
+    Från :
+    <img src="/img/SAM_desktopToofewThings.PNG" alt="">
+    Till : 
+    <img src="/img/SAM_desktopLayoutFix.PNG" alt="">
+
+    För att jag visste att jag skulle ha flera identiska sidor använde jag mig även av en klass så att jag enkelt kunde få samma CSS på ett annat ställe. 
+    <img src="/img/SAM_class.PNG" alt="">
+    Det som är kvar på sidorna är att fixa själva bilderna och texten angående den anställda. 
+
+
+    Den näst-sista som jag gjorde var huvudsidan om just företaget i sig. Det vill säga de saker som vi som företag har gjort / varit med på. Exempelvis Mässor, föreläsningar och skolbesök.
+    Planen med denna sidan var att cirka halva sidan skulle tas upp av ett skrollbart block där alla våra "bragder" är uppradade. Det var även gå att klicka för att få mer information om varje sak. 
+    Denna fanns ingen skiss på innan, men dess upplägg är så pass likt de andra sidorna som exempelvis Matteräknaren-sidan så att det kändes onödligt att göra en separat skiss.
+    Har fortfarande ett problem gällade att man skrollar på mobilen och att det då inte går att ta sig till nästa sida, utan man sitter fast på den sidan --> Fixar senare genom att korta ner sidan och endast har skroll på en del. 
+    
+    Skalning fungerar ej för tablet :
+    <img src="/img/o44_noScalingForTablet.PNG" alt="">
+    Scrollbart block. 
+    <img src="/img/o44_blockToBeAbleToScroll.PNG" alt="">
+
+
+    Den sista sidan som jag byggde var sidan för att kontakta företaget. På denna sida finns det information om hur du når företaget eller dess personal. 
+    Även denna sida är väldigt lik resterande så det fanns ingen specifik skiss. Den stora skillnaden är att denna ska ha ett formulär. Tanken är att du fyller i ärende och mail.
+    Sidan kommer sedan skicka iväg ett mail till oss och även ett mail till den address som skrivits in, så att man vet att mailet har skickats. 
+    Detta är dock inget som jag har fixat med än då det kräver en bot som ansluter till en av våra mailar som skickar ut alla mail; både till oss och kunden.
+
+
+    Nu när alla sidor är klara bestämde jag mig för att börja kolla på att animera sidorna. Första steget i detta var att fixa en rörlig bakgrund.
+    Jag ville skapa en bakgrund som satte en färgklick på sidan samtidigt som att den inte skulle vara allt för distraherande. Jag kom upp med detta : 
+    <img src="/img/INDEX_with_background.PNG" alt="">
+    Det som händer är att jag har 8st block som alla är formade som en kvadrat. Dessa blocken åker i olika takt från mitten och utåt till vart sitt hörn på en oktagon. 
+    Samtidigt snurrar de även runt sin egen axel för att ge känslan av att de faktiskt svävar fram och inte åker. I och med att alla blocken tar olika lång tid på sig tar det alltså väldigt lång tid innan samma mönster upprepar sig. 
+    Det gör att fastän exempelvis det oranga blocket alltid åker till samma ställe och alltid är samma storlek är det inget man tänker på, då det blir så "rörigt" i mitten. 
+
+    Ändrade även om INDEX-sidan : 
+    från : 
+    <img src="/img/index_added_menu.PNG" alt="">
+    till :
+    <img src="/img/INDEX_changedMenu.PNG" alt="">
+
+    När jag höll på att fixa med bakgrunden passade jag även på att fixa en gammal bugg. Buggen var att det inte gick att använde skrollhjulet för att skrolla på de olika textrutorna då det även triggade eventet som gjorde att man skrollade sig vidare på sidan. 
+    Jag löste dock detta genom att sätta en spärr på skolleventet som fick sidan att röra på sig när man skrollade i textrutorna. Det var väldigt trevligt att fått löst denna bugg, då det var något som var viktigt att det fungerade som tänkt.
     <h3>Lektion vecka 8</h3>
     <!-- Fyll på med dokumentation här. -->
 
