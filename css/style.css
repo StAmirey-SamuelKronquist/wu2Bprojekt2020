@@ -209,19 +209,6 @@ button {
     100% {width: 100%; height: 100%;}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* BOX CSS */
 
 #container {
@@ -385,7 +372,6 @@ button {
     text-align: center;
     margin: auto;
     border-top: solid 2px white;
-    padding: 5% 10% 10% 10%;
 }
 #two main h1 {
     color: #9579da;
@@ -539,7 +525,7 @@ button {
 .employee main div {
     width:  calc(40vh);
     height: calc(40vh);
-    border-radius: 50%;
+    border-radius: 30% 30% 10% 10%;
     box-shadow: inset 0px 0px var(--unit2) var(--unit2) black;
     background-size: cover;
     background-color: white;
@@ -621,7 +607,6 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 2px solid black;
 }
 
 
@@ -848,7 +833,8 @@ button {
     font-size: calc(2.5vw * var(--multiplier));
 }
 #six header h1 {
-    margin-bottom:0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 #six main {
     grid-area: mn6;
@@ -1186,7 +1172,7 @@ button {
         'hd6'
         'mn6'
         'se6';
-        grid-template-rows: 150px 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
         grid-template-columns: 1fr;  
     }
     .employee section div {
@@ -1228,23 +1214,20 @@ button {
 
 #six section article {
     width: 80%;
-    height:80%;
     background: #1f2b33;
     box-shadow: inset 0px 0px 10px 0px black;
     border-radius:16px;
     padding-left:20px;
     padding-right:40px;
-    margin-top:20px;
-    margin-bottom:20px;
 }
 
 #six section article .mrContainer {
-    padding:10%;
+    padding:5%;
     height:100%;
 }
 .mrContainer div {
     overflow-y:scroll;
-    height: 50%;
+    height: 30vh;
 }
 .mrContainer div p {
     font-size: 15pt;
@@ -1576,7 +1559,7 @@ button {
     width: 100%;
 }
 
-#seven .appGame header {
+#seven .mainContainer .appGame header {
     height: 20%;
     width: 100%;
     position: relative;
@@ -2061,7 +2044,7 @@ button {
             'o44mn o44se'
             'o44ft o44se'
         ;
-        grid-template-rows: 4fr 2fr 1fr;
+        grid-template-rows: 4fr 4fr 80px;
         grid-template-columns: 1fr 1fr;
         width: 100vw;
         height: 100vh;

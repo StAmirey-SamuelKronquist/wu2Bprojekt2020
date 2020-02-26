@@ -1,21 +1,28 @@
 x = 0;
-height = $(window).height(); // New height
-width = $(window).width(); // New width
-let things = Math.sqrt(4 * width * width + 10.8 * height * width + 7.29 * height * height + height);
-let allWidth = width * 2 + height + 2 * 0.707 * height;
-let leftValue = ((things - allWidth) / 2);
-console.log(leftValue)
-$(".circle").css({
-    "width": things + "px",
-    "margin-left": -leftValue + "px",
-    "height": things + "px"
-});
-$(".section").css({
-    "width": allWidth + "px",
-    "left": leftValue + "px"
+
+function resizeScreen () {
+    height = $(window).height(); // New height
+    width = $(window).width(); // New width
+    let things = Math.sqrt(4 * width * width + 10.8 * height * width + 7.29 * height * height + height);
+    let allWidth = width * 2 + height + 2 * 0.707 * height;
+    let leftValue = ((things - allWidth) / 2);
+    console.log(leftValue)
+    $(".circle").css({
+        "width": things + "px",
+        "margin-left": -leftValue + "px",
+        "height": things + "px"
+    });
+    $(".section").css({
+        "width": allWidth + "px",
+        "left": leftValue + "px"
+    })
+}
+
+
+$(window).resize(function () {
+    resizeScreen();
 })
-
-
+resizeScreen();
 
 let spinWhenDegree = 45;
 closedItem = false;
@@ -193,10 +200,14 @@ $(".appGameButton").click(function () {
 })
 
 $(".mrContainer").click(function () {
-    $(".mainContainer").css("margin-left", "9vw");
+    if($( window ).width() < 1100) {
+        $(".mainContainer").css("margin-left", "9vw");
+    }
 })
 $(".appContainer").click(function () {
-    $(".mainContainer").css("margin-left", "-47vw");
+    if($( window ).width() < 1100) {
+        $(".mainContainer").css("margin-left", "-47vw");
+    }
 })
 
 $("#two section article h2").click(function () {
