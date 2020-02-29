@@ -1,6 +1,6 @@
 x = 0;
 
-function resizeScreen () {
+function resizeScreen() {
     height = $(window).height(); // New height
     width = $(window).width(); // New width
     let things = Math.sqrt(4 * width * width + 10.8 * height * width + 7.29 * height * height + height);
@@ -73,55 +73,64 @@ $(".backgroundContainer").scroll(function (e) {
 });
 
 
-    $('#two section, .employee section div, #five main article div, .mrContainer div, #seven section article .mrContainer div, #six .MRmenu').bind('mousewheel', function() {
+$("#two, #six").bind('mousewheel', function () {
+    if($(window).width() <= 700) {
         closedItem = true;
-        setTimeout(function (){
+        setTimeout(function () {
             closedItem = false;
-        },100)
-    });
-    $('.circle').bind('mousewheel', function(e){
-        if (!closedItem) {
-            if(e.originalEvent.wheelDelta /120 > 0) {
-                x -= 2;
-                if (Math.ceil(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
-                    console.log((Math.round(x / spinWhenDegree) * spinWhenDegree));
-                    console.log(x);
-                    x = Math.round(x / spinWhenDegree) * spinWhenDegree;
+        }, 100)
+    };
+});
+
+$('#two section, .employee section div, #five main article div, .mrContainer div, #seven section article .mrContainer div, #six .MRmenu').bind('mousewheel', function () {
+    closedItem = true;
+    setTimeout(function () {
+        closedItem = false;
+    }, 100)
+});
+$('.circle').bind('mousewheel', function (e) {
+    if (!closedItem) {
+        if (e.originalEvent.wheelDelta / 120 > 0) {
+            x -= 2;
+            if (Math.ceil(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
+                console.log((Math.round(x / spinWhenDegree) * spinWhenDegree));
+                console.log(x);
+                x = Math.round(x / spinWhenDegree) * spinWhenDegree;
+                $(".circle").css({
+                    "-webkit-transition": "800ms linear",
+                    "transform": "rotate(" + x + "deg)"
+                });
+                closedItem = true;
+                setTimeout(function () {
+                    closedItem = false;
                     $(".circle").css({
-                        "-webkit-transition": "800ms linear",
-                        "transform": "rotate(" + x + "deg)"
+                        "-webkit-transition": "100ms linear"
                     });
-                    closedItem = true;
-                    setTimeout(function () {
-                        closedItem = false;
-                        $(".circle").css({
-                            "-webkit-transition": "100ms linear"
-                        });
-                    }, 800);
-                }
-            } else {
-                x += 2;
-                if (Math.floor(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
-                    x = Math.round(x / spinWhenDegree) * spinWhenDegree;
+                }, 800);
+            }
+        } else {
+            x += 2;
+            if (Math.floor(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
+                x = Math.round(x / spinWhenDegree) * spinWhenDegree;
+                $(".circle").css({
+                    "-webkit-transition": "800ms linear",
+                    "transform": "rotate(" + x + "deg)"
+                });
+                closedItem = true;
+                setTimeout(function () {
+                    closedItem = false;
                     $(".circle").css({
-                        "-webkit-transition": "800ms linear",
-                        "transform": "rotate(" + x + "deg)"
+                        "-webkit-transition": "100ms linear"
                     });
-                    closedItem = true;
-                    setTimeout(function () {
-                        closedItem = false;
-                        $(".circle").css({
-                            "-webkit-transition": "100ms linear"
-                        });
-                    }, 800);
-                }
+                }, 800);
             }
-            if (!closedItem) {
-                $(".circle").css("transform", "rotate(" + x + "deg)");
-            }
-    
         }
-    });
+        if (!closedItem) {
+            $(".circle").css("transform", "rotate(" + x + "deg)");
+        }
+
+    }
+});
 
 
 
@@ -133,7 +142,12 @@ $(".littleCircle").hover(
         $(this).find("h1").hide();
     }
 )
-let rotationInfo = {c1 : 90, c2: 180, c3 : 315, c4 : 45};
+let rotationInfo = {
+    c1: 90,
+    c2: 180,
+    c3: 315,
+    c4: 45
+};
 $(".littleCircle").click(function () {
     rotate(rotationInfo[$(this).attr('id')])
 })
@@ -153,7 +167,7 @@ let rotate = (value) => {
     }, 800);
 }
 
-$("#two header h1, #five section h1, #eight footer h1, .employee .emLogo h1").click(function (){
+$("#two header h1, #five section h1, #eight footer h1, .employee .emLogo h1").click(function () {
     rotate(0);
 });
 
@@ -200,12 +214,12 @@ $(".appGameButton").click(function () {
 })
 
 $(".mrContainer").click(function () {
-    if($( window ).width() < 1100) {
+    if ($(window).width() < 1100) {
         $(".mainContainer").css("margin-left", "9vw");
     }
 })
 $(".appContainer").click(function () {
-    if($( window ).width() < 1100) {
+    if ($(window).width() < 1100) {
         $(".mainContainer").css("margin-left", "-47vw");
     }
 })
@@ -216,10 +230,10 @@ $("#two section article h2").click(function () {
 
 
 let projectInfo = {
-    card1 : {
-        color : '#73b0f4',
-        title : 'Beställ en Hemsida',
-        main : `
+    card1: {
+        color: '#73b0f4',
+        title: 'Beställ en Hemsida',
+        main: `
             <b>Things</b>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
@@ -232,10 +246,10 @@ let projectInfo = {
             <button></button>
         `
     },
-    card2 : {
-        color : '#f76c82',
-        title : 'MatteRäknaren',
-        main : `
+    card2: {
+        color: '#f76c82',
+        title: 'MatteRäknaren',
+        main: `
             <b>Things</b>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
@@ -248,10 +262,10 @@ let projectInfo = {
             <button></button>
         `
     },
-    card3 : {
-        color : '#9579da',
-        title : 'Utmana, Tävla, Vinn',
-        main : `
+    card3: {
+        color: '#9579da',
+        title: 'Utmana, Tävla, Vinn',
+        main: `
             <b>Things</b>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
@@ -264,10 +278,10 @@ let projectInfo = {
             <button></button>
         `
     },
-    card4 : {
-        color : '#97ca62',
-        title : 'o44´s Kurser',
-        main : `
+    card4: {
+        color: '#97ca62',
+        title: 'o44´s Kurser',
+        main: `
             <b>Things</b>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
@@ -280,10 +294,10 @@ let projectInfo = {
             <button></button>
         `
     },
-    card5 : {
-        color : '#fdcd56',
-        title : 'Köp Steam-Bot',
-        main : `
+    card5: {
+        color: '#fdcd56',
+        title: 'Köp Steam-Bot',
+        main: `
             <b>Things</b>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, quo necessitatibus, unde incidunt libero illo quae officia consequuntur optio sapiente tenetur atque, delectus nemo.</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate unde accusamus magnam atque voluptate incidunt ipsum deleniti hic molestias quaerat.</p>
@@ -301,9 +315,9 @@ let projectInfo = {
 let activeProject = "hemsidor";
 $(".card").click(function () {
     $(".card").toggleClass('heightToggle');
-    
+
     let id = $(this).attr('id')
-    setTimeout(function() {
+    setTimeout(function () {
         document.documentElement.style.setProperty('--projectColor', projectInfo[id].color)
         $("#five main article h1").text(projectInfo[id].title);
         $("#five main article div").empty();
@@ -312,6 +326,37 @@ $(".card").click(function () {
     }, 500);
 })
 
+
+$(".upwards").click(function () {
+    x -= 45;
+    x = Math.ceil(x / 45) * 45;
+    $(".circle").css({
+        "-webkit-transition": "800ms linear",
+        "transform": "rotate(" + x + "deg)"
+    });
+    closedItem = true;
+    setTimeout(function () {
+        closedItem = false;
+        $(".circle").css({
+            "-webkit-transition": "100ms linear"
+        });
+    }, 800);
+});
+$(".downwards").click(function () {
+    x += 45;
+    x = Math.floor(x / 45) * 45;
+    $(".circle").css({
+        "-webkit-transition": "800ms linear",
+        "transform": "rotate(" + x + "deg)"
+    });
+    closedItem = true;
+    setTimeout(function () {
+        closedItem = false;
+        $(".circle").css({
+            "-webkit-transition": "100ms linear"
+        });
+    }, 800);
+});
 
 
 

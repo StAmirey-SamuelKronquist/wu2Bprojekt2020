@@ -37,6 +37,39 @@ button {
     overflow: hidden;
 }
 
+.backgroundContainer article {
+    position: absolute;
+    width: calc(5 * var(--unit2));
+    height: calc(5 * var(--unit2));
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 2;
+    opacity: .1;
+    user-select: none;
+    -webkit-transition: 100ms linear;
+}
+.backgroundContainer article:hover {
+    cursor: pointer;
+    opacity: .5;
+    transform: translateX(-50%) scale(0.95);
+}
+.backgroundContainer .upwards {
+    top: 2%;
+}
+.backgroundContainer .downwards {
+    bottom: 2%;
+}
+.backgroundContainer article p {
+    font-size: calc(5 * var(--unit2));
+    margin: 0;
+    transform: rotate(90deg);
+}
+
 .boxarea {
     margin: 0;
     position: relative;
@@ -225,7 +258,7 @@ button {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    transform: rotate(0deg);
+    transform: rotate(315deg);
     -webkit-transition: 100ms linear;
     user-select: none;
 }
@@ -526,11 +559,9 @@ button {
     width:  calc(40vh);
     height: calc(40vh);
     border-radius: 30% 30% 10% 10%;
-    box-shadow: inset 0px 0px var(--unit2) var(--unit2) black;
-    background-size: cover;
-    background-color: white;
 }
-#four main div {
+.jonas {
+    background-size: cover;
     background-image: url('/img/PictureJonas.png')
 }
 
@@ -826,6 +857,16 @@ button {
      'se6 mn6';
      grid-template-rows: 150px 1fr;
      grid-template-columns: 1fr 1fr;  
+}
+#six::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(71, 71, 71);
+    padding:2px;
+    border-radius: 5px;
+} 
+#six::-webkit-scrollbar-thumb {
+    background-color: #f76c82;
+    border-radius: 5px;
 }
 
 #six header {
@@ -1283,7 +1324,7 @@ button {
 #seven {
     width: 100vw;
     height: 100vh;
-    overflow-y: scroll;
+    overflow: hidden;
     display: grid;
     grid-template-areas: 
         'APPhd'
@@ -1317,7 +1358,7 @@ button {
 #seven header h1 {
     margin: auto;
     text-transform: uppercase;
-    font-size: 5vh;
+    font-size: calc(5 * var(--unit1));
 }
 
 #seven main {
@@ -1762,6 +1803,17 @@ button {
     padding-bottom: 10px;
 }
 
+#eight img {
+    width: auto;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#eight img:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
 #eight section {
     grid-area: CONse;
     display: flex;
@@ -1892,12 +1944,12 @@ button {
 #eight main section:nth-child(3) article div:nth-child(1) {
     width: 12vw;
     height: 12vw;
-    background: black;
     border-radius: 50%;
 }
 #eight main section:nth-child(3) article div:nth-child(3) {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
     text-align: center;
 }
