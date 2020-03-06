@@ -258,7 +258,7 @@ button {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    transform: rotate(315deg);
+    transform: rotate(0deg);
     -webkit-transition: 100ms linear;
     user-select: none;
 }
@@ -691,6 +691,7 @@ button {
     width: 80%;
     height: 350px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 #five main article b {
     color: rgb(187, 187, 187);
@@ -741,7 +742,6 @@ button {
     justify-content: center;
     align-items: center;
     color: #f76c82;
-    border-bottom: 2px solid white;
     user-select: none;
 }
 
