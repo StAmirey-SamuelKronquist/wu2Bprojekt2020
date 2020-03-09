@@ -17,7 +17,7 @@
             overflow: hidden;
             background: black;
             color: white;
-            display: flex;
+            display: none;
             flex-direction: column;
         }
         header {
@@ -37,6 +37,28 @@
             margin: auto;
         }
 
+
+        button {
+            width: 150px;
+            height: 40px;
+            border: 2px solid black;
+            background: none;
+            display: none;
+        }
+        button p {
+            margin: auto;
+        }
+        .info {
+            width: 146px;
+            display: none;
+            flex-direction: column;
+            border: 2px solid black;
+            align-items: center;
+        }
+        
+        .flexClass {
+            display: flex;
+        }
         
     </style>
 </head>
@@ -57,10 +79,19 @@
         </article>
     </div>
     
+    <button class="flexClass"><p>Things</p></button>
+    <div class="info">
+        <h2>Infromation</h2>
+        <p>Styles, S M L</p>
+    </div>
+
 </body>
 
     <script>
-        
+        $(".info, button").click(function () {
+            $("button").toggleClass("flexClass");
+            $(".info").toggleClass("flexClass");
+        })
     </script>
 
 </html>
