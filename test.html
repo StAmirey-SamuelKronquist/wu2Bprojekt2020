@@ -28,28 +28,39 @@
         header h1 {
             margin: auto;
         }
-        article {
+        /* article {
             flex: 1;
             border-bottom: 1px solid white;
             display: flex;
         }
         article h2 {
             margin: auto;
-        }
+        } */
 
 
         .infoContainer {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 200px;
+            height: auto;
+            background: gray;
         }
-        .infoContainer div {
+        .infoContainer button {
             width: 150px;
             height: 50px;
-            display: none;
             flex-direction: column;
             border: 2px solid black;
             align-items: center;
+        }
+        .infoContainer div {
+            display: none;
+        }
+        .infoContainer .img {
+            width: 150px;
+            height : 150px;
+            background: black;
         }
         
         .infoContainer .flexClass {
@@ -83,40 +94,47 @@
             <h2>Övrigt</h2>
         </article>
     </div>
-    <div class="infoContainer" id="flexOne">
-        <div class="flexClass" id="one"><p>Things</p></div>
-        <div id="two">
-            <h2>Infromation</h2>
-            <p>Styles, S M L</p>
+        <div class="infoContainer" id="flexOne">
+            <article class="img"></article>
+            <div class="flexClass" id="one">
+                <p>Pris</p>
+                <p>Others</p>
+            </div>
+            <div id="two">
+                <h2>Infromation</h2>
+                <p>Styles, S M L</p>
+            </div>
+            <button class="flexButton" value="flexOne"></button>
         </div>
-    </div>
-    <div class="infoContainer" id="flexTwo">
-        <div class="flexClass" id="one"><p>Things</p></div>
-        <div id="two">
-            <h2>Infromation</h2>
-            <p>Styles, S M L</p>
-        </div>
-    </div>
+    
 </body>
 
     <script>
         active = false;
-        $(".infoContainer").click(function () {
+        $(".flexButton").click(function () {
             if(!active) {
-                active = true;
-
-                attr = "#"+$(this).attr("id");
-                $(attr).toggleClass("animation");
-                
-                setTimeout(function () {
-                    $(`${attr} div`).toggleClass("flexClass");
-                }, 1000)
-                setTimeout(function () {
-                    $(attr).toggleClass("animation");
-                    active = false;
-                }, 2000)
+                let attr = "#"+$(this).attr("value");
+                rotatation(attr);
             }
         })
+        $(".infoContainer").click(function () {
+            if(!active && $(`#${$(this).attr("id")} div:nth-child(3)`).hasClass("flexClass")) {
+                let attr = "#"+$(this).attr("id");
+                rotatation(attr);
+            }
+        })
+
+        function rotatation(attr) {
+            $(attr).toggleClass("animation");
+            active = true;
+            setTimeout(function () {
+                $(`${attr} div`).toggleClass("flexClass");
+            }, 1000)
+            setTimeout(function () {
+                $(attr).toggleClass("animation");
+                active = false;
+            }, 2000)
+        }
     </script>
 
 </html>
