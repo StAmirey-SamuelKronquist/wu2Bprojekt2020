@@ -6,7 +6,7 @@
     --unit2: 1vh;
     --multiplier: 2;
     --appMultiplier : 1;
-    --projectColor : #73b0f4
+    --projectColor : #73b0f4;
 }
 
 html {
@@ -258,7 +258,7 @@ button {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    transform: rotate(0deg);
+    transform: rotate(270deg);
     -webkit-transition: 100ms linear;
     user-select: none;
 }
@@ -1336,11 +1336,11 @@ button {
 
 #seven .mainContainer {
     display: flex;
-    height: 75vh;
+    height: 70vh;
     width: 120vw;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-left: 9vw;
+    margin-left:21.2vw;
     -webkit-transition: 500ms;
 }
 
@@ -1364,12 +1364,15 @@ button {
 #seven main {
     grid-area: APPmn;
     display: grid;
+    position: relative;
+    height: 100%;
+    width: 48%;
 }
 
 #seven main article {
     margin: auto;
-    width: calc(47vh * var(--appMultiplier));
-    height: calc(70vh * var(--appMultiplier));
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
     background: black;
     border-bottom: 1vw solid black;
@@ -1382,7 +1385,6 @@ button {
     background-color: #05090b;
     overflow: hidden;
     position: relative;
-    
 }
 .appIndex {
     width: 100%;
@@ -1469,6 +1471,8 @@ button {
     justify-content: center;
     align-items: center;
     background: none;
+    height: auto;
+    width: auto;
 }
 .appMenu main .mainCircle {
     width: 30vh;
@@ -1677,23 +1681,26 @@ button {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 100%;
 }
 #seven section article {
-    height: calc(70vh * var(--appMultiplier));
-    width: calc(70vh * var(--appMultiplier));
+    height: 100%;
+    width: 100%;
     background: #1f2b33;
     box-shadow: inset 0px 0px 10px 0px black;
     border-radius: 16px;
-    margin: calc(2vh * var(--appMultiplier));
     position: relative;
+    display: flex;
     
 }
 #seven section article .mrContainer {
-    height: calc(58vh * var(--appMultiplier));
+    margin: auto;
+    height: 90%;
     position: relative;
-    width: calc(60vh * var(--appMultiplier));
+    width: 95%;
     display: flex;
-    padding: 5vh 5vw 5vh 5vw;
     flex-direction: column;
 }
 #seven section article .mrContainer div {
@@ -1745,8 +1752,8 @@ button {
         width: 100vw;
         height: 100vh;
         grid-template-rows: 100px 1fr;
-        grid-template-columns: 5fr 3fr;
-        margin-left: auto;
+        grid-template-columns: 4fr 3fr;
+        margin-left: auto !important;
     }
     #seven header {
         display: none;
@@ -1761,14 +1768,24 @@ button {
     #seven .mainContainer header h1 {
         margin-bottom: 0;
     }
+    
+    #seven section {
+        width: 100%;
+        height: 100%;
+    }
     #seven section article {
-        width: 90%;
+        width: 80%;
+        height: 80%;
     }
     #seven section article .mrContainer {
         width: 90%;
-        padding: 5%;
+    }
+    #seven main {
+        display: flex;
+        width: 100%;
     }
     #seven main article {
+        margin: auto;
         width: 30vw;
         height: 45vw;
     }
@@ -2102,7 +2119,7 @@ button {
         height: 100vh;
         overflow: hidden;
     }
-
+    
     #eight {
         grid-template-areas:
             'CONmn CONft'
@@ -2115,4 +2132,14 @@ button {
         display: flex;
     }
 
+}
+
+
+@media screen and (max-width: 701px) {
+    #two section {
+        overflow-y: auto;
+    }
+    #two section article h1 {
+        font-size: 5vw;
+    }
 }

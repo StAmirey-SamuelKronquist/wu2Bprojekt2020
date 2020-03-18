@@ -8,105 +8,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
     <style>
-        .backgroundContainer {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
             overflow: hidden;
-            background: black;
-            color: white;
+            width: 120vw;
+            height: 60vh;
+            /* margin-left: 21.2vw;  */
+            margin-left:-42.4vw;
+        }
+        main section {
+            width: 48%;
+            height: 100%;
+            background-color: black;
+        }
+        main header {
             display: none;
-            flex-direction: column;
-        }
-        header {
-            height: 100px;
-            display: flex;
-            background-color: gray;
-        }
-        header h1 {
-            margin: auto;
-        }
-        /* article {
-            flex: 1;
-            border-bottom: 1px solid white;
-            display: flex;
-        }
-        article h2 {
-            margin: auto;
-        } */
-
-
-        .infoContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: auto;
-            background: gray;
-        }
-        .infoContainer button {
-            width: 150px;
-            height: 50px;
-            flex-direction: column;
-            border: 2px solid black;
-            align-items: center;
-        }
-        .infoContainer div {
-            display: none;
-        }
-        .infoContainer .img {
-            width: 150px;
-            height : 150px;
-            background: black;
-        }
-        
-        .infoContainer .flexClass {
-            display: flex;
-        }
-
-        .animation {
-            animation: rotate 2s linear;
-        }
-        @keyframes rotate {
-            0% {transform: rotateY(0deg);}
-            50% {transform: rotateY(90deg);}
-            100% {transform: rotateY(0deg);}
         }
         
     </style>
 </head>
 
 <body>
-    <div class="backgroundContainer">
-        <header>
-            <h1>Hello! There</h1>
-        </header>
-        <article>
-            <h2>Blommor</h2>
-        </article>
-        <article>
-            <h2>Annat</h2>
-        </article>
-        <article>
-            <h2>Övrigt</h2>
-        </article>
-    </div>
-        <div class="infoContainer" id="flexOne">
-            <article class="img"></article>
-            <div class="flexClass" id="one">
-                <p>Pris</p>
-                <p>Others</p>
-            </div>
-            <div id="two">
-                <h2>Infromation</h2>
-                <p>Styles, S M L</p>
-            </div>
-            <button class="flexButton" value="flexOne"></button>
-        </div>
     
+    <main>
+        <header>
+            <h1>Matteräknaren-App</h1>
+        </header>
+        <section class="one"></section>
+        <section class="two"></section>
+    </main>
+
 </body>
 
     <script>

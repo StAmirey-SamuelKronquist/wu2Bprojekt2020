@@ -215,12 +215,12 @@ $(".appGameButton").click(function () {
 
 $(".mrContainer").click(function () {
     if ($(window).width() < 1100) {
-        $(".mainContainer").css("margin-left", "9vw");
+        $(".mainContainer").css("margin-left", "21.2vw");
     }
 })
 $(".appContainer").click(function () {
     if ($(window).width() < 1100) {
-        $(".mainContainer").css("margin-left", "-47vw");
+        $(".mainContainer").css("margin-left", "-42.4vw");
     }
 })
 
