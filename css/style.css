@@ -556,13 +556,17 @@ button {
     align-items: center;
 }
 .employee main div {
-    width:  calc(40vh);
-    height: calc(40vh);
+    width: calc(35vh);
+    height: calc(35vh);
     border-radius: 30% 30% 10% 10%;
 }
 .jonas {
     background-size: cover;
     background-image: url('/img/PictureJonas.png')
+}
+.samuel {
+    background-size: cover;
+    background-image: url("/img/samuel.png");
 }
 
 .employee .emLogo {
