@@ -556,7 +556,7 @@ button {
     align-items: center;
 }
 .employee main div {
-    width: calc(35vh);
+    width:  calc(35vh);
     height: calc(35vh);
     border-radius: 30% 30% 10% 10%;
 }
@@ -566,7 +566,7 @@ button {
 }
 .samuel {
     background-size: cover;
-    background-image: url("/img/samuel.png");
+    background-image: url('/img/samuel.png')
 }
 
 .employee .emLogo {
