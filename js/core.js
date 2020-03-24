@@ -26,51 +26,6 @@ resizeScreen();
 
 let spinWhenDegree = 45;
 closedItem = false;
-$(".backgroundContainer").scroll(function (e) {
-    console.log(closedItem)
-    if (!closedItem) {
-        if (e.deltaY < 0) {
-            x -= 2;
-            if (Math.ceil(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
-                console.log((Math.round(x / spinWhenDegree) * spinWhenDegree));
-                console.log(x);
-                x = Math.round(x / spinWhenDegree) * spinWhenDegree;
-                $(".circle").css({
-                    "-webkit-transition": "800ms linear",
-                    "transform": "rotate(" + x + "deg)"
-                });
-                closedItem = true;
-                setTimeout(function () {
-                    closedItem = false;
-                    $(".circle").css({
-                        "-webkit-transition": "100ms linear"
-                    });
-                }, 800);
-            }
-        } else {
-            x += 2;
-            if (Math.floor(x / spinWhenDegree) != Math.round(x / spinWhenDegree)) {
-                x = Math.round(x / spinWhenDegree) * spinWhenDegree;
-                $(".circle").css({
-                    "-webkit-transition": "800ms linear",
-                    "transform": "rotate(" + x + "deg)"
-                });
-                closedItem = true;
-                setTimeout(function () {
-                    closedItem = false;
-                    $(".circle").css({
-                        "-webkit-transition": "100ms linear"
-                    });
-                }, 800);
-            }
-        }
-        if (!closedItem) {
-            $(".circle").css("transform", "rotate(" + x + "deg)");
-        }
-
-    }
-
-});
 
 
 $("#two, #six").bind('mousewheel', function () {
@@ -88,7 +43,7 @@ $('#two section, .employee section div, #five main article div, .mrContainer div
         closedItem = false;
     }, 100)
 });
-$('.circle').bind('mousewheel', function (e) {
+$('').bind('mousewheel', function (e) {
     if (!closedItem) {
         if (e.originalEvent.wheelDelta / 120 > 0) {
             x -= 2;
