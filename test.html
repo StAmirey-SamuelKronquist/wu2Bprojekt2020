@@ -8,38 +8,149 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
     <style>
-        main {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            width: 120vw;
-            height: 60vh;
-            /* margin-left: 21.2vw;  */
-            margin-left:-42.4vw;
-        }
-        main section {
-            width: 48%;
-            height: 100%;
-            background-color: black;
-        }
-        main header {
-            display: none;
-        }
+
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ .logo {
+     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    border-radius: 50%;
+    animation: verticalRotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.logo h1 {
+    opacity: 0;
+    font-size:calc(10vh);
+    animation-name: normalFadeIn;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.logo h2 {
+    opacity: 0;
+    font-weight: 400;
+    font-size:calc(4vh);
+}
+.logo .the {
+    margin-top:-3vh;
+    margin-right:-4vh;
+    animation-name: leftFadeInLogo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.logo .project {
+    margin-top:14vh;
+    margin-left:-9vh;
+    animation-name: rightFadeInLogo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.moto {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moto h2 span {
+    font-weight: 400;
+    font-size:calc(6vh);
+    opacity: 0;
+}
+
+.moto h2 span:nth-child(1) {
+    animation-delay: 5s;
+    animation-name: leftFadeIn;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.moto h2 span:nth-child(2) {
+    animation-delay: 5s;
+    animation-name: rightFadeIn;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes normalFadeIn {
+    0% {opacity: 0;}
+    5% {opacity: 1;}
+    45% {opacity: 1;}
+    50% {opacity: 0;}
+}
+@keyframes leftFadeInLogo {
+    0% {opacity: 0; margin-right:calc(-8vh)}
+    5% {opacity: 1; margin-right:calc(-3vh);}
+    45% {opacity: 1; margin-right:calc(-3vh);}
+    50% {opacity: 0; margin-right:calc(-8vh)}
+}
+@keyframes leftFadeIn {
+    0% {opacity: 0; margin-left:calc(-8vh)}
+    15% {opacity: 1; margin-left:calc(0vh);}
+    35% {opacity: 1; margin-left:calc(0vh);}
+    50% {opacity: 0; margin-left:calc(-8vh)}
+}
+@keyframes rightFadeInLogo {
+    0% {opacity: 0; margin-left:calc(-14vh);}
+    5% {opacity: 1; margin-left:calc(-9vh);}
+    45% {opacity: 1; margin-left:calc(-9vh);}
+    50% {opacity: 0; margin-left:calc(-14vh);}
+}
+@keyframes rightFadeIn {
+    0% {opacity: 0; margin-left:calc(16vh);}
+    15% {opacity: 1; margin-left:calc(0vh);}
+    35% {opacity: 1; margin-left:calc(0vh);}
+    50% {opacity: 0; margin-left:calc(16vh);}
+}
+
+
+@keyframes verticalRotation {
+    0% {
+        transform: rotateX(90deg);
+    }
+    10% {
+        transform: rotateX(0deg);
+    }
+    90% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(90deg);
+    }
+}
         
     </style>
 </head>
 
 <body>
+    <div id="container">
+        <div class="logo">
+            <h2 class="the">The</h2>
+            <h1>o44</h1>
+            <h2 class="project">Project</h2>
+        </div>
+        <div class="moto">
+            <h2><span>the Futu</span><span>re is Now</span></h2>
+        </div>
+    </div>
     
-    <main>
-        <header>
-            <h1>Matteräknaren-App</h1>
-        </header>
-        <section class="one"></section>
-        <section class="two"></section>
-    </main>
 
 </body>
 

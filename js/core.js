@@ -43,7 +43,7 @@ $('#two section, .employee section div, #five main article div, .mrContainer div
         closedItem = false;
     }, 100)
 });
-$('').bind('mousewheel', function (e) {
+$('.circle').bind('mousewheel', function (e) {
     if (!closedItem) {
         if (e.originalEvent.wheelDelta / 120 > 0) {
             x -= 2;

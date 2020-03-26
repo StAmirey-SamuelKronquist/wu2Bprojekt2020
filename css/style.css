@@ -22,6 +22,14 @@ button {
     border:none;
 }
 
+.everyContainer {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
 
 /* BACKGROUND CSS */
@@ -258,7 +266,7 @@ button {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    transform: rotate(270deg);
+    transform: rotate(0deg);
     -webkit-transition: 100ms linear;
     user-select: none;
 }
@@ -408,6 +416,7 @@ button {
 }
 #two main h1 {
     color: #9579da;
+    animation: 1.5s verticalRotation;
 }
 #two main b {
     display: block;
@@ -429,6 +438,7 @@ button {
     height: 100%;
     overflow-y: scroll;
     position: relative;
+    animation: 1s blind linear;
 }
 #two section article {
     width: 80%;
@@ -876,11 +886,11 @@ button {
 
 #six header {
     grid-area: hd6;
-    font-size: calc(2.5vw * var(--multiplier));
 }
 #six header h1 {
     margin-bottom: 10px;
     margin-top: 10px;
+    font-size: calc(7.5 * var(--unit1));
 }
 #six main {
     grid-area: mn6;
@@ -1276,7 +1286,7 @@ button {
     height: 30vh;
 }
 .mrContainer div p {
-    font-size: calc(2vw * var(--multiplier));
+    font-size: calc(1.5vw * var(--multiplier));
 }
 
 .mrContainer div::-webkit-scrollbar {
@@ -1303,7 +1313,7 @@ button {
     margin-bottom:2vw;
 }
 #six section article button {
-    width:200px;
+    width:50%;
     height:50px;
     border-radius: 8px;
     background: #f76c82;
@@ -1341,7 +1351,7 @@ button {
 
 #seven .mainContainer {
     display: flex;
-    height: 70vh;
+    height: 60vh;
     width: 120vw;
     justify-content: space-between;
     align-items: center;
@@ -1363,7 +1373,7 @@ button {
 #seven header h1 {
     margin: auto;
     text-transform: uppercase;
-    font-size: calc(5 * var(--unit1));
+    font-size: calc(4 * var(--multiplier) * var(--unit1));
 }
 
 #seven main {
@@ -1776,7 +1786,7 @@ button {
     
     #seven section {
         width: 100%;
-        height: 100%;
+        height: calc(100vh - 100px);
     }
     #seven section article {
         width: 80%;
@@ -1788,11 +1798,19 @@ button {
     #seven main {
         display: flex;
         width: 100%;
+        height: 100%;
+        justify-content: center;
     }
     #seven main article {
-        margin: auto;
         width: 30vw;
         height: 45vw;
+    }
+    #seven .appMenu main {
+        margin: auto;
+    }
+    #seven .appGame main {
+        margin: 0;
+        justify-content: flex-start;
     }
 }
 
@@ -2146,5 +2164,24 @@ button {
     }
     #two section article h1 {
         font-size: 5vw;
+    }
+}
+
+
+#two main div p {
+    animation: 1.5s verticalRotation;
+}
+
+@keyframes blind {
+    0% {height: 0%;}
+    100% {height: 100%;}
+}
+
+@keyframes verticalRotation {
+    0% {
+        transform: rotateX(-90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
     }
 }

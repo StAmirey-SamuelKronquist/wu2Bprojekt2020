@@ -34,9 +34,29 @@
     Företaget är fokuserad på programmering, webbutveckling och programmeringskurser och sidan ska representera detta.
     Sidan ska även ha information om oss som äger företaget och sätt att kontakta oss!
 
+    Den målgruppen som jag tänker mig är 
+
     <h2>2. Planering</h2>
 
+    <h3>2.0 Färgtema</h3>
+    När det gäller färgtema kommer jag använda mig av likande färger som <a href="https://matteraknaren.com/">Matteräknaren</a>. 
+    
+    Bakgrund : 
+    #1f2b33, #21343f, #2f4150, #18232b
+
+    Textfärg : 
+    Huvudsakligen : #ffffff 
+
+    Övriga färger : 
+    #f76c82, #97ca62, #fdcd56, #73b0f4, #9579da, #fa6c51
+
+
     <h3>2.1 Handskiss</h3>
+
+    <img src="skiss_del2.pdf" alt="handskiss1_mobil">
+    <img src="skiss_del1.pdf" alt="handskiss2_mobil_dator">
+    <img src="skiss_dator.png" alt="handskiss1_dator">
+    <img src="skiss_dator2.png" alt="handskiss2_dator">
     <!-- Här lägger du en bild på din handskiss av layouten. Viktigt att du beskriver vilka boxelement som ska användas. Visa även hur du tänker med ditt grid (Hur många kolumner?) -->
 
     <h3>2.2 Schema</h3>
@@ -158,6 +178,8 @@
 
     <h2>3. Dokumentation</h2>
     <!-- Här skriver du efter varje lektion. Vad har jag gjort? Vad gick bra? Vad gick mindre bra? Vad ska jag tänka på till nästa gång? -->
+
+
 
     <h3>Lektion vecka 4</h3>
     <!-- Fyll på med dokumentation här. -->
@@ -308,6 +330,7 @@
 
     När jag höll på att fixa med bakgrunden passade jag även på att fixa en gammal bugg. Buggen var att det inte gick att använde skrollhjulet för att skrolla på de olika textrutorna då det även triggade eventet som gjorde att man skrollade sig vidare på sidan. 
     Jag löste dock detta genom att sätta en spärr på skolleventet som fick sidan att röra på sig när man skrollade i textrutorna. Det var väldigt trevligt att fått löst denna bugg, då det var något som var viktigt att det fungerade som tänkt.
+    
     <h3>Lektion vecka 8</h3>
     Idag arbetade jag med att skapa de bilder som ska användas till våra profilbilder. Jag använde mig av lagermasker för att kunna klippa ut våra ansikten och ändrade även kontrasten på bilden.
     Efter att ha lagt in bilden tyckte jag dock att det såg lite märkligt ut att den var helt rund. Nästa vecka ska jag testa att ändra detta.
@@ -331,19 +354,29 @@
     Med dessa knappar blir sidan även mer anpassad till alla användare. Detta gör att det kommer finnas ännu ett sätt att byta sida för de användare som är ovana vid denna högteknologiska och innovativa scrollning som faktiskt finns på denna sida. 
     I förbifarten fixade jag även så att kan inte kunde skrolla under tiden som animationen till nästa sidan var aktiv. Det känns som att detta kommer 
     göra så att man inte råkar trycka sig för långt fram på sidorna, dock kan det vara en nackdel om man snabbt vill klicka sig framåt. 
+    
+    Enligt planeringen skulle jag under denna lektionen fylla i alla sidor med den rätta brödtexten. Efter lite fungderande kom jag dock fram till att det var lite onödigt.
+    Det kändes som att det skulle ta alldeles för lång tid att göra fylla i all text och dessutom vill jag göra detta med min kollega Jonas, då vi tillsammans kan bestämma vad som ska stå. 
+    
     <!-- Fyll på med dokumentation här. -->
+
+
 
     <h3>Lektion vecka 11</h3>
     Idag började jag göra alla tester på sidan. 
     Jag gjorde kontrasttesterna och fick utmärkt resultat. Det var dock väntat då jag hade tänkt på att göra det tydligt med väldigt mörk bakgrund och vit text. 
 
     När det gällde valideringen av HTML:n stötte jag på några problem med att man inte kunde ha flera main i samma HTML dokument.
-    På min sida är det dock flera sidor i samma HTML dokument vilket gjorde att jag kände att jag ville ha fler Main:s hoppas det är okej. 
+    På min sida är det dock flera sidor i samma HTML dokument vilket gjorde att jag kände att jag ville ha fler Main:s, hoppas det är okej. 
 
     När det gäller validering av CSS var det inga större problem. Det var dock lite klagomål på alla mina CSS-variabler men det är inte riktigt något jag kan göra åt då de används för min skalning. 
     
     Jag han även med att göra photoshop-bilden på mig som ska ligga på sidan "om oss". Det tog dock lite extra tid då jag inte riktigt kom ihåg
     hur photoshop fungerade. Började med att klippa ut bilden och lade den som en lagermask och sedan satte jag ett filter på den.
+
+
+    Min tankte från början enligt planeringen var att inte göra testerna och likande förens nästa vecka, men jag kände att detta var som sagt en inplanerad buffertlektion och jag kände att allting låg i fas. 
+
 
     <!-- Fyll på med dokumentation här. -->
     
@@ -368,13 +401,110 @@
     Problemet innan var att de olika blocken för information och själva prototypen var olika stora, vilket gjorde att blocken 
 
 
+    <h3>Lektion vecka 13</h3>
+    Idag gjorde jag de sista sakerna på sidan. 
+
     <!-- Fyll på med dokumentation här. -->
 
     <h2>4. Testning</h2>
+
+    Mobil : 
+    I början var det stora problem med min scrollfunktion. Min lösning blev att sätta dit en div runt hela html dokumentet. Tydligen ignoreres "oveflow:hidden" som ligger på html eller body taggen på just mobil. 
+    Det gick dock att sätta en div runt hela som fungerade som en body. På denna kunde jag sätta "overflow:hidden" och "position:relative" för att skapa samma "förutsättningar" som en body skulle gjort.
+    Jag märkte även små buggar i min skalning på vissa sidor, men dessa var relativt lätt fixade. 
     
+    Edge : 
+    Edge som webbläsare ligger lite efter i utvecklingen inom webbutvecklingen. Detta gjorde att den t.ex var petigare när det gällde "img/..." istället för "/img/..." som då inte fungerade. 
+    Det var även vissa andra små problem som t.ex CSS:n som jag lagt för att styla själva scrollbaren inte fungerade. 
+    Bild här : 
+    <img src="EDGE_test1.PNG" alt="EDGE_test1">
+
+    Firefox : 
+    För att testa på en lite mer vanlig webbläsare och en som är snabbare när det gäller uppdatering av ny webb-syntax gjorde jag även samma tester på Firefox.
+    Även här var det dock många saker som inte såg riktigt samma ut. 
+    Nr. 1 : gick inte att scrolla med scroll-hjulet utan endast med tangenterna. 
+    Nr. 2 : Fungerade endast att ändra färger på bakgrunden på scroll-baren, men inte utseendet på den, 
+    <img src="FIREFOX_test1.PNG" alt="FIREFOX_test1">
+    Nr. 3 : Min meny för att komma vidare ligger inte längs kanten på cirkeln som innan 
+    Nr. 4 : Inga bilder som ligger i CSS:n laddar in
+    <img src="FIREFOX_test2.PNG" alt="FIREFOX_test2">
+
+    Contrastchecker : 
+    Kontrast-testet gav perfekt resultat. Det var bra då jag vill att sidan ska vara tillgänglig för alla och att jag valde just den mörka bakgrunden mot den vita texten för att skapa en bra kontrast. 
+    <img src="contrastchecker" alt="">
+
+    Validering av kod : 
+    HTML : 
+    När det gällde valideringen av HTML:n stötte jag på några problem med att man inte kunde ha flera main i samma HTML dokument.
+    På min sida är det dock flera sidor i samma HTML dokument vilket gjorde att jag kände att jag ville ha fler Main:s, hoppas det är okej. 
+    Det var även lite klagomål på min placering av "script"-taggen, vilket jag löste genom att lägga dennna innanför body:n. 
+
+    CSS : 
+    När det gäller validering av CSS var det inga större problem. 
+    Det var dock lite klagomål på alla mina CSS-variabler, att de inte var så man brukade använda det, men det är inte riktigt något jag kan göra åt då de används för min skalning. 
+    Det jag har använt variablerna till är att endast kunna ändra variablen från t.ex vw till vh från mobil till dator. 
+    Jag tror dock inte detta är något som variabler brukar användas till, men jag tyckte det var smidigt då det sparade mig mycket tid med skalningen då jag inte behövde ändra för varje element, utan bara värdet på variabeln.
+
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
 
     <h2>5. Utvärdering</h2>
+
+    Överlag tyckte jag att projektet gick bra och slutresultatet blev som tänkt. 
+    Jag hade som mål under detta projektet att försöka komma på så många inovativa och nya saker som möjligt att testa på inom webbutveckling. 
+    Detta var t.ex ett nytt sätt att skrolla på sidor, CSS:bakgrunder som jag innan inte hade hållt på med och olika typer av prototyper av andra webbsidor / appar. 
+    Jag tyckte verkligen att jag fick till det bra med att få sidan att se ny och innovativ ut samtidigt som den lite blev för klottrig eller svårnavigerade.
+    Mer konkret tror jag att den blev så pass användarvänlig p.g.a min uppdelning. På varje sida kunde du endast se information om något speciellt område, vilket gjorde att den inte blev för mycket sinnesintryck.
+    Även de pilarna som används för att ta sig fram eller tillbaka på sidan tror jag kommer hjälpa mycket för användarna. 
+
+    Förutom just att jag tyckte att mitt mål uppfylldes blev jag även glatt förvånad över hur smidigt det gick att följa planeringen. 
+    Innan varje tillfälle skrev jag en lite lista över saker jag tänkte fixa under det "passet". På detta sättet blev det inte så överväldigande som det annars skulle blivit om jag skulle försökt göra allt samtidigt.
+    Det som gick lite sämre när det gäller planeringen var dock att jag skulle tänkt på att jag troligen velat fixa de fel / buggar som uppkom efter exempelvis testning från andra webbläsare. 
+    I nuläget gjorde jag dessa tester sista lektionen som planerat och hade därför ingen större tid att kolla in i att lösa alla problem. 
+    Min tanke är dock att de problem som jag hittade inte är något som gör sidan direkt sämre eller att den inte går att använda. 
+    Exemplevis fungerade inte scroll-funktionen i firefox, men pilarna för att byta sida fungerade fortfarande, vilket jag tror är det vesäntliga.
+
+    Jag tyckte det även var roligt att själva den rörliga bakgrunden gick så pass smärtfritt samtidigt som den ser väldigt häftig ut.
+    Det var roligt att endast med 8 st kvadrater som rör sig från mitten och ut kunna skapa något som skapar ett så komplext mönster. 
+    Detta visar att det oftast är lättare att skapa saker än vad man tror, då det som i detta fallet skapas som en synvilla om att det är svårare / mer komplext än det egentligen är. 
+    Jag tyckte att bakgrunden fyllde sitt syfte bra med att göra sidan mer innovativ och färgglad samtidigt som att de lite nedtonade färgerna gjorde att den inte tog över från den vanliga sidan.
+    Det var en balansgång som jag tyckte gick väldigt bra. Ville ha den synlig men inte jobbigt ivägen. 
+
+    När jag byggde sidan funderade jag mycket på det effektivaste sättet att sköta skalningen och att försöka återanvända så mycket som möjligt mellan sidorna. 
+    Skalningen blev t.ex väldigt simpel med min användning av variabler. 
+    Det som jag gärna skulle gjort med mer tid eller om jag skulle börjat om skulle varit att försöka skapa generella klasser.
+    Med det menar jag att jag t.ex har en klass som heter "flex-row", vilket används till alla element som använder sig av flex i rader. 
+    Nu blev det att en enormt stor mängd av sidans CSS är upprepning av samma CSS:kod. 
+    Detta system kräver dock att man redan från början har bestämt vilka sådana här klasser man ska använda för att på det sättet kunna använda sig av dessa när man bygger sidan.
+    Jag tror att detta skulle ha effektiviserat arbetet då jag vid nya sidor med exemplevis behövde ett block med flex bara skulle ge den klassen "flex", utan att lägga till någon CSS. 
+
+    Nyligen hade jag även lärt mig att istället för att skapa klassnamn till alla barn i t.ex en section kan man "komma åt dem" i CSS:n genom att exempelvis skriva "main p".
+    Detta använde jag mycket, men jag märkte också att det i vissa fall ställde till problem.
+    Om jag exempelvis hade en main med p:s i och även en artikel som också hade p:s i sig verkade då min generella CSS för p:s "main p" på alla p:s. 
+    Detta ledde till ett gäng konstiga buggar där jag fick ovälkommen CSS på fel ställe. 
+    Min slutsats av detta blir därför att det är ett väldigt smidigt sätt att "peka" mot speciella taggar, men att om det du pekar mot har inhärjat i för mycket bör du inte använda detta.
+    Det är då bättre att använda klasser. 
+
+    Med tanke på klasser.
+    Det som jag började göra efter en stund var att börja ge klassen namn som t.ex "contact_circle", vilket specifierar att det är en cirkel som ligger på sidan kontakt. 
+    Innan hade jag endast klassnamn som ex. "circle", vilket visst beskrev själva elementet, men detta gjorde att om jag ville ha en cirkel någon annan stans kunde jag inte också kalla denna "circle" om den inte skulle vara identisk.
+    I slutet av projektet började jag dock namnge mina klasser så att de blev mer unika, men till nästa gång ska jag tänka på att göra detta från början.
+
+    Vad jag skulle gjort om jag hade mer tid tror jag i första hand skulle varit att anpassa sidan för tablet. 
+    Fastän det är så få som använder tablet skulle jag ändå känna en tillfredställelse i att veta att sidan fungerar för alla. 
+    Jag skulle då även lagt ner lite tid för att fixa så att t.ex utzoomningsfunktionen på mobil inte gjort sidan helt obrukbar. 
+    I nuläget när man zoomar ut kommer de sidor som man inte är på en synas, vilket inte är optimalt. 
+
+    Något som jag skulle hoppats att jag hade mer tid till var att göra sidan mycket mer "levade" med ner abimationer.
+    Exempelvis skulle jag gärna haft text som kommer in när man laddar texten. Animationer som visar upp de funktioner på sidan och 
+
+    Så som sammanfattning : 
+    När jag kollar tillbaka på projektet är jag mycket nöjd med slutresultatet. 
+    Jag har lärt mig mycket på projektet och mycket saker som jag kommer ta med mig när jag fortsätter med webbutveckling. 
+    Min största lärdom är att i sådana här projekt lägga ännu mer tid på själva planeringen.
+    I och med att jag visste att detta projekt skulle bli stort med mycket kod skulle jag t.ex lagt mer tid på att planera hur jag skulle lägga upp min CSS, då det blev mycket ineffektiv kodning ibland. 
+
+
+
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
