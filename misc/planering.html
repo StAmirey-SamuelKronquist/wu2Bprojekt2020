@@ -34,7 +34,9 @@
     Företaget är fokuserad på programmering, webbutveckling och programmeringskurser och sidan ska representera detta.
     Sidan ska även ha information om oss som äger företaget och sätt att kontakta oss!
 
-    Den målgruppen som jag tänker mig är 
+    Den målgruppen som jag tänker mig är specifikt de som vill beställa en hemsida eller annan service från oss.
+    Vi ska även kunna referera till denna sida för att de ska kunna kolla in vilka vi är och hur man kontaktar oss på annat sätt.
+    Blir alltså väldigt splittat med personer, både de som kan hemsidor & teknik bra och de som inte kan det så bra. Det är därför viktigt med bra användarvänlighet.
 
     <h2>2. Planering</h2>
 
@@ -428,10 +430,20 @@
     Nr. 3 : Min meny för att komma vidare ligger inte längs kanten på cirkeln som innan 
     Nr. 4 : Inga bilder som ligger i CSS:n laddar in
     <img src="FIREFOX_test2.PNG" alt="FIREFOX_test2">
+    Fixes : 
+    Src:n för bilderna CSS:n var felaktig i och med att de ligger i css-foldern vilket jag inte tänkte på. Ska dessutom inte vara fnuttar runt url:n som jag hade. 
+
 
     Contrastchecker : 
     Kontrast-testet gav perfekt resultat. Det var bra då jag vill att sidan ska vara tillgänglig för alla och att jag valde just den mörka bakgrunden mot den vita texten för att skapa en bra kontrast. 
-    <img src="contrastchecker" alt="">
+    <img src="contrastchecker.PNG" alt="contrastchecker_test">
+
+    Det traditionella byta dator tricket : 
+    Jag lät i detta testet Cornelia ladda mer min senaste version från github som en zipfil och testa att använda sidan. 
+    Detta ledde till att jag såg några fel gällade att bilderna inte fungerade överallt. 
+    Annars fungerade det bra, förutom för att få css:n att ladda in var hon tvungen att öppna sidan via liveserver, vilket är lite konstigt.
+    Ska därför testa detta igen senare för att se om det bara var något tillfälligt. 
+    
 
     Validering av kod : 
     HTML : 
@@ -450,11 +462,12 @@
     <h2>5. Utvärdering</h2>
 
     Överlag tyckte jag att projektet gick bra och slutresultatet blev som tänkt. 
-    Jag hade som mål under detta projektet att försöka komma på så många inovativa och nya saker som möjligt att testa på inom webbutveckling. 
-    Detta var t.ex ett nytt sätt att skrolla på sidor, CSS:bakgrunder som jag innan inte hade hållt på med och olika typer av prototyper av andra webbsidor / appar. 
-    Jag tyckte verkligen att jag fick till det bra med att få sidan att se ny och innovativ ut samtidigt som den lite blev för klottrig eller svårnavigerade.
-    Mer konkret tror jag att den blev så pass användarvänlig p.g.a min uppdelning. På varje sida kunde du endast se information om något speciellt område, vilket gjorde att den inte blev för mycket sinnesintryck.
-    Även de pilarna som används för att ta sig fram eller tillbaka på sidan tror jag kommer hjälpa mycket för användarna. 
+    Jag hade som mål under detta projektet att försöka komma på så många innovativa och nya saker som möjligt att testa på inom webbutveckling. 
+    Exempelvis ett nytt sätt att skrolla på sidor, CSS:bakgrunder som jag innan inte hade hållt på med och olika typer av prototyper av andra webbsidor / appar. 
+    Jag tyckte verkligen att jag fick till det bra med att få sidan att se ny och innovativ ut samtidigt som den inte blev för klottrig eller svårnavigerade.
+    Mer konkret tror jag att den blev så pass användarvänlig p.g.a att sidorna var uppdelade. På varje sida kunde du endast se information om något speciellt område, vilket gjorde att det inte blev för mycket sinnesintryck på samma ställe.
+    Även de pilarna som används för att ta sig fram eller tillbaka på sidan tror jag kommer hjälpa mycket för användarna.
+    Om jag exempelvis inte skulle lagt till dem, vilket var planen från början skulle det varit svårare att naviera sig för de som inte förstod scrollen och på webbläsare som Edge skulle det inte gått att ta sig runt alls.  
 
     Förutom just att jag tyckte att mitt mål uppfylldes blev jag även glatt förvånad över hur smidigt det gick att följa planeringen. 
     Innan varje tillfälle skrev jag en lite lista över saker jag tänkte fixa under det "passet". På detta sättet blev det inte så överväldigande som det annars skulle blivit om jag skulle försökt göra allt samtidigt.
@@ -463,25 +476,25 @@
     Min tanke är dock att de problem som jag hittade inte är något som gör sidan direkt sämre eller att den inte går att använda. 
     Exemplevis fungerade inte scroll-funktionen i firefox, men pilarna för att byta sida fungerade fortfarande, vilket jag tror är det vesäntliga.
 
-    Jag tyckte det även var roligt att själva den rörliga bakgrunden gick så pass smärtfritt samtidigt som den ser väldigt häftig ut.
+    Jag tyckte det även var roligt att den rörliga bakgrunden gick så pass smärtfritt, samtidigt som den ser väldigt häftig ut.
     Det var roligt att endast med 8 st kvadrater som rör sig från mitten och ut kunna skapa något som skapar ett så komplext mönster. 
     Detta visar att det oftast är lättare att skapa saker än vad man tror, då det som i detta fallet skapas som en synvilla om att det är svårare / mer komplext än det egentligen är. 
-    Jag tyckte att bakgrunden fyllde sitt syfte bra med att göra sidan mer innovativ och färgglad samtidigt som att de lite nedtonade färgerna gjorde att den inte tog över från den vanliga sidan.
+    Jag tyckte att bakgrunden fyllde sitt syfte bra med att göra sidan mer innovativ och färgglad samtidigt som de lite nedtonade färgerna gjorde att den inte tog över från den vanliga sidan.
     Det var en balansgång som jag tyckte gick väldigt bra. Ville ha den synlig men inte jobbigt ivägen. 
 
-    När jag byggde sidan funderade jag mycket på det effektivaste sättet att sköta skalningen och att försöka återanvända så mycket som möjligt mellan sidorna. 
+    När jag byggde sidan funderade jag mycket på det effektivaste sättet att sköta skalningen och att försöka återanvända mig av så mycket som möjligt mellan sidorna. 
     Skalningen blev t.ex väldigt simpel med min användning av variabler. 
     Det som jag gärna skulle gjort med mer tid eller om jag skulle börjat om skulle varit att försöka skapa generella klasser.
     Med det menar jag att jag t.ex har en klass som heter "flex-row", vilket används till alla element som använder sig av flex i rader. 
     Nu blev det att en enormt stor mängd av sidans CSS är upprepning av samma CSS:kod. 
     Detta system kräver dock att man redan från början har bestämt vilka sådana här klasser man ska använda för att på det sättet kunna använda sig av dessa när man bygger sidan.
-    Jag tror att detta skulle ha effektiviserat arbetet då jag vid nya sidor med exemplevis behövde ett block med flex bara skulle ge den klassen "flex", utan att lägga till någon CSS. 
+    Jag tror att detta skulle ha effektiviserat arbetet då jag vid nya sidor denna med dessa klasser, utan att lägga till någon ytterliggare CSS. 
 
     Nyligen hade jag även lärt mig att istället för att skapa klassnamn till alla barn i t.ex en section kan man "komma åt dem" i CSS:n genom att exempelvis skriva "main p".
     Detta använde jag mycket, men jag märkte också att det i vissa fall ställde till problem.
     Om jag exempelvis hade en main med p:s i och även en artikel som också hade p:s i sig verkade då min generella CSS för p:s "main p" på alla p:s. 
     Detta ledde till ett gäng konstiga buggar där jag fick ovälkommen CSS på fel ställe. 
-    Min slutsats av detta blir därför att det är ett väldigt smidigt sätt att "peka" mot speciella taggar, men att om det du pekar mot har inhärjat i för mycket bör du inte använda detta.
+    Min slutsats av detta blir därför att det är ett väldigt smidigt sätt att "peka" mot speciella taggar, men att om det du pekar mot är inhärjat i för mycket bör du inte använda detta.
     Det är då bättre att använda klasser. 
 
     Med tanke på klasser.
@@ -494,15 +507,17 @@
     Jag skulle då även lagt ner lite tid för att fixa så att t.ex utzoomningsfunktionen på mobil inte gjort sidan helt obrukbar. 
     I nuläget när man zoomar ut kommer de sidor som man inte är på en synas, vilket inte är optimalt. 
 
-    Något som jag skulle hoppats att jag hade mer tid till var att göra sidan mycket mer "levade" med ner abimationer.
-    Exempelvis skulle jag gärna haft text som kommer in när man laddar texten. Animationer som visar upp de funktioner på sidan och 
+    Något som jag hoppats att jag hade mer tid till var att göra sidan mycket mer "levade" med mer animationer.
+    Exempelvis skulle jag gärna haft text som kommer in när man laddar sidan. Animationer som visar upp de funktioner på sidan genom t.ex pekhänder som pekar mot olika saker och liknande.
+    Jag kanske lägger till lite saker innan, men detta skulle jag gärna lagt mer tid på. 
 
     Så som sammanfattning : 
     När jag kollar tillbaka på projektet är jag mycket nöjd med slutresultatet. 
     Jag har lärt mig mycket på projektet och mycket saker som jag kommer ta med mig när jag fortsätter med webbutveckling. 
     Min största lärdom är att i sådana här projekt lägga ännu mer tid på själva planeringen.
     I och med att jag visste att detta projekt skulle bli stort med mycket kod skulle jag t.ex lagt mer tid på att planera hur jag skulle lägga upp min CSS, då det blev mycket ineffektiv kodning ibland. 
-
+    
+    Yes, tack för mig. 
 
 
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).

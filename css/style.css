@@ -565,18 +565,18 @@ button {
     justify-content: center;
     align-items: center;
 }
-.employee main div {
+.employee main img {
     width:  calc(35vh);
     height: calc(35vh);
     border-radius: 30% 30% 10% 10%;
 }
 .jonas {
     background-size: cover;
-    background-image: url('/img/PictureJonas.png')
+    background-image: url(../img/PictureJonas.png)
 }
 .samuel {
     background-size: cover;
-    background-image: url('/img/samuel.png')
+    background-image: url(../img/samuel.png)
 }
 
 .employee .emLogo {
@@ -898,7 +898,7 @@ button {
 #six main article {
     width: calc(45vw * var(--multiplier));
     height: calc(37vw * var(--multiplier));
-    background-image: url(/img/screen.svg);
+    background-image: url(../img/screen.svg);
     background-size: 100% 100%;
 }
 .screen {
@@ -1406,7 +1406,7 @@ button {
     height: 100%;
     display: none;
     flex-direction: column;
-    background-image: url('/img/app_index.png');
+    background-image: url(../img/app_index.png);
     background-size: 100% 100%;
     justify-content: center;
     align-items: center;
@@ -1526,7 +1526,7 @@ button {
 .mainCircle .shield {
     width: 25%;
     height: 25%;
-    background-image: url(/img/shield_color.svg);
+    background-image: url(../img/shield_color.svg);
     background-size: 110% 100%;
     transform: translateY(-50%) translateX(-50%);
     display: flex;
@@ -1613,7 +1613,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('/img/app_index.png');
+    background-image: url(../img/app_index.png);
     background-size: 100% 100%;
     height: 100%;
     width: 100%;
@@ -2050,22 +2050,22 @@ button {
 
 #c1 {
     margin-left:calc(40 * var(--unit1));
-    background-image: url(/img/supervisor_account-24px.svg);
+    background-image: url(../img/supervisor_account-24px.svg);
     animation: normalFadeIn 2s, rotation 50s linear infinite reverse;
 }
 #c2 {
     margin-left:calc(-40 * var(--unit1));
-    background-image: url(/img/code-24px.svg);
+    background-image: url(../img/code-24px.svg);
     animation: normalFadeIn 4s, rotation 50s linear infinite reverse;
 }
 #c3 {
     margin-top:calc(-40 * var(--unit1));
-    background-image: url(/img/contacts-24px.svg);
+    background-image: url(../img/contacts-24px.svg);
     animation: normalFadeIn 1s, rotation 50s linear infinite reverse;
 }
 #c4 {
     margin-top:calc(40 * var(--unit1));
-    background-image: url(/img/info-24px.svg);
+    background-image: url(../img/info-24px.svg);
     animation: normalFadeIn 3s, rotation 50s linear infinite reverse;
 }
 
